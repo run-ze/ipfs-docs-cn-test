@@ -163,7 +163,7 @@ Installation complete!
 这是最简单的升级方法。
 
 <div class="message mb">
-  <strong>警告：</strong> 确保升级时 ipfs 后台程序没在运行。
+  <strong>警告：</strong> 确保升级时 ipfs 守护程序没在运行。
 </div>
 
 
@@ -171,13 +171,13 @@ Installation complete!
 
 要手动升级 `ipfs`，你需要手动执行仓库迁移。步骤如下：
 
-* 停止 `ipfs` 后台程序，如果它正在运行
+* 停止 `ipfs` 守护程序，如果它正在运行
 * 可以备份你的 `ipfs` 数据目录（例如：`cp -aL ~/.ipfs ~/.ipfs.bk`）
 * 从 [https://dist.ipfs.io/#go-ipfs](https://dist.ipfs.io/#go-ipfs) 下载并安装最新版 `ipfs`
 * 运行 `ipfs daemon`。
 
 如果需要迁移仓库，`ipfs` 会提示用户，下载并安装 `fs-repo-migrations` 并进行升级。
-如果你想要自动执行这个流程，在启动后台程序时附加 `--migrate` 参数。
+如果你想要自动执行这个流程，在启动守护程序时附加 `--migrate` 参数。
 
 也可以从 [https://dist.ipfs.io/#fs-repo-migrations](https://dist.ipfs.io/#fs-repo-migrations)
 下载最新版 `fs-repo-migrations` 并
