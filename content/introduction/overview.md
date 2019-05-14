@@ -1,86 +1,88 @@
 ---
-title: What is IPFS?
+title: IPFS 是什么？
 weight: 1
 ---
 
-Welcome! If you’re new to IPFS, you’ve come to the right place. This guide is intended to give you a thorough but quick overview of what IPFS is, how it works, and how to use it.
+欢迎！如果你是 IPFS 的新手，那么你来对地方了。本指南旨在向你全面而快速地概述 IPFS 是什么、它是如何工作的以及如何使用它。
 
-## IPFS is a distributed system for storing and accessing files, websites, applications, and data.
+## IPFS 是一个用于存储和访问文件、网站、应用和数据的分布式系统。
 
-What does that mean, exactly? Let’s say you’re doing some research on Aardvarks. (Just roll with it; Aardvarks are cool! Did you know they can tunnel 3 feet in only 5 minutes?) You might start by visiting the wikipedia page on Aardvarks at:
+这到底是什么意思？假设你正在研究食蚁兽。（食蚁兽很酷！你知道它们能在 5 分钟内挖 3 英尺吗？）你可能从访问食蚁兽的维基百科开始： <!-- just roll with it 在这里应该怎么说？随它去吧？就这样？ -->
 
 ```
-https://en.wikipedia.org/wiki/Aardvark
+https://zh.wikipedia.org/wiki/食蚁兽
 ```
 
-When you put that URL in your browser’s address bar, your computer asks one of Wikipedia’s computers, which might be somewhere on the other side of the country — or even the planet — for the Aardvark page. However, if you use IPFS to get that page from:
+当你在浏览器的地址栏输入这个 URL 时，你的电脑会向维基百科的一台电脑请求食蚁兽页面，这台电脑可能在国家的另一边，甚至可能在地球的另一边。但是如果你使用 IPFS 从以下网站获取该页面：
+
+<!-- 要不要把这个地址换成中文的？但是好像还没有 IPFS 中文维基镜像 -->
+```
+/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
+```
+
+你的电脑可能是从镇上其他人的电脑，或者甚至是街对面邻居的电脑上得到的。当你使用 IPFS 时，你不仅可以从别人那里下载文件，而且你的电脑也可以帮助分发文件——当你几个街区以外的朋友需要同一个维基百科页面时，他们可能会像你的邻居一样从你那里获取文件。
+
+IPFS 不只可以用于网页，也可以用于计算机可能存储的任何类型的文件，无论是 MS Word 文档、电子邮件、MP3 文件，甚至是数据库记录。
+
+
+## 这又怎样呢？
+
+使从不被同一个组织管理的多个地点下载一个文件成为可能……
+
+- **让一个网站很难离线。**如果有人攻击维基百科的网络服务器，或者维基百科的工程师犯了一个大错误，导致他们的服务器着火，你仍然可以从其他地方获取相同的页面。
+
+- **使当局更难审查内容。**因为 IPFS 上的文件可以来自许多地方，而且其中一些地方可能就在附近，所以当局（无论是州、公司还是其他人）很难屏蔽这些内容。2017 年，土耳其封锁了维基百科，西班牙封锁了访问加泰罗尼亚独立网站的途径。我们希望 IPFS 能够阻止这样的行为。
+
+- **当你断网或者距离很远时，可以加快网络速度。**如果你能从附近的某个人而非几百或者几千英里以外的地方获取文件，你就可以得到更快的速度。（有足够资金和专业知识的组织可以通过 CDN 或多个数据中心来做到这一点，但 IPFS 的目标是让每个人都能做到这一点。）如果你的社区虽然联网，但是与更广泛的互联网连接不好，那么这就特别有价值了。
+
+最后一点，也是 IPFS 名称的由来：**星际文件系统**！我们正在努力建立一个系统，能跨越像其他星球那样互不相连或者相距甚远的地方。这是一个相当理想化的目标，但它让我们努力工作和思考，而且我们为了追求这个目标而创造的大多数东西在离家更近的地方也是有用的。
+
+
+## IPFS 上的链接不会改变。
+
+上面的独角兽页面的链接怎么样？它看起来有点不同寻常：
 
 ```
 /ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
 ```
 
-Your computer might have gotten it from someone else’s computer across town, or maybe even your neighbor’s computer across the street. When you use IPFS, you don’t only download a file from someone else, but your computer can help distribute it, too — when your friend a few blocks away needs the same Wikipedia page, they might be as likely to get it from you as your neighbor.
+`/ipfs/`后面的一堆字母被称为[*内容识别码(content identifier)*]({{<relref "guides/concepts/cid.md">}})，它是 IPFS 可以从多个地方获取内容的原因。 <!-- 觉得这个比内容标识符好 -->
 
-IPFS makes this possible for web pages, but also for any kind of file a computer might store, whether it’s an MS Word document, an e-mail, an MP3 file, or even a database record.
+传统的 URL 和文件路径，比如：
 
-
-## So why does that matter?
-
-Making it possible to download a file from many locations that aren’t managed by one organization…
-
-- **Makes it hard for a website to go offline.** If someone attacks Wikipedia’s web servers or an engineer at Wikipedia makes a big mistake that causes their servers to catch fire, you can still get the same page from somewhere else.
-
-- **Makes it harder for authorities to censor content.** Because files on IPFS can come from many places and because some of those places might be nearby, it’s very hard for authorities (whether they’re states, corporations, or someone else) to block things. In 2017, Turkey blocked Wikipedia and Spain blocked access to Catalonian independence sites. We hope IPFS can prevent actions like those.
-
-- **Can speed up the web when you’re far away or disconnected.** If you can retrieve a file from someone nearby instead of hundreds or thousands of miles away, you can get it faster. (Organizations with enough money and expertise can do this with CDNs or multiple data centers, but IPFS aims to make this possible for everyone.) That’s especially valuable if your community is networked, but doesn’t have a good connection to the wider internet.
-
-That last point is actually where IPFS gets it’s name: **Inter-Planetary File System**! We’re striving to build a system that works across places as disconnected or far apart as other planets. That’s a pretty idealistic goal, but it keeps us working and thinking hard, and most everything we create in pursuit of that goal is also useful closer to home.
-
-
-## Links don’t change on IPFS.
-
-What about that link to the Aardvark page above? It looked a little unusual:
-
-```
-/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html
-```
-
-That jumble of letters after `/ipfs/` is called a [*content identifier*]({{<relref "guides/concepts/cid.md">}}) and it’s how IPFS can get content from multiple places.
-
-Traditional URLs and file paths like…
-
-- `https://en.wikipedia.org/wiki/Aardvark`
+- `https://zh.wikipedia.org/wiki/食蚁兽`
 - `/Users/Alice/Documents/term_paper.doc`
 - `C:\Users\Joe\My Documents\project_sprint_presentation.ppt`
 
-…identify a file by *where it’s located* — what computer it’s on and where on that computer’s hard drive it is. That doesn’t work if the file is in many places, though, like your neighbor’s computer and your friend’s across town.
+根据 *文件的位置* 来识别文件——它在哪台计算机上、它在那台计算机上的什么位置。但是如果文件有很多位置，比如你邻居的电脑和和城市另一边你朋友的电脑上，它就没用了。
 
-Instead of being location-based, IPFS addresses a file by *what’s in it*, or by its *content*. The content identifier above is a *hash* of the content at that address, which means it’s also unique to that content, even though it’s [relatively] short. It also allows you to verify you got what you asked for — bad actors can’t just hand you content that doesn’t match. (If hashes are new to you, check out [the concept guide on hashes]({{<relref "guides/concepts/hashes.md">}}) for a good introduction.)
+IPFS 不是基于位置的，而是根据 *文件里有什么* ，或者说文件 *内容* 来定位文件。上面的内容识别码是该地址对应的内容的散列(hash)，这意味着对于那个内容，它也是唯一的，尽管它[相对]较短。它也可以让你确认你收到的东西就是你请求的——坏人不能把不匹配的内容交给你。（如果你不了解散列，可以查看[散列的概念指南]({{<relref "guides/concepts/hashes.md">}})以获得良好的介绍。）
 
 <aside class="alert alert-info">
-  Why do we say “content” instead of “files” or “web pages” here? Because a content identifier can point to many different types of data. In order to make the storage & transmission of data more efficient, IPFS can break files up in to many smaller pieces — which then means the system needs some metadata to tie them back together. An IPFS address can refer to the metadata of just a single piece of a file, a whole file, a directory, a whole website, or even other kinds of data.
+  为什么我们在这里说“内容”而非“文件”或者“网页”？因为一个内容识别码可以指向许多类型的数据。为了更高效的存储和传输数据，IPFS 把文件分割为许多更小的分片——这意味着系统需要一些元数据来把它们拼回来。IPFS 地址指向的元数据可以表示文件的一个单独的分片、一整个文件、一个目录、一整个网站，甚至是其他类型的数据。
 </aside>
 
-Because the address of a file in IPFS is tied to the content itself, links in IPFS can’t be changed. For example…
+由于 IPFS 中一个文件的地址与它的内容绑定，IPFS 中的链接是不可更改的。比如：
 
-- If the text on a web page is changed, the new version gets a new, different link. If your favorite cooking site changes how they layout recipes your IPFS links will still point to the old version.
+- 如果网页中的文字改变了，新版网页有一个新的、不一样的链接。如果你最喜爱的烹饪网站改变了菜谱的排版，你的 IPFS 链接依然指向旧版。
 
-- Content can’t be moved to a different address. If a company reorganizes their web site today, they could move a page from `http://mycompany.com/what_we_do` to `http://mycompany.com/services`. In IPFS, the old link you have would still point to the same content.
+- 内容不能被迁移到新的地址。如果一个公司重构他们的网站，他们可以把一个页面从`http://mycompany.com/what_we_do`移动到`http://mycompany.com/services`。在 IPFS 中，你的旧链接始终指向相同的内容。
 
-- If someone removes a page entirely, you can still get it at the same address.
+- 如果有人彻底地移除了一个页面，你还是能用相同的地址访问它。
 
-It’s important to remember in all of these situations that it’s the address or link that doesn’t change. The IPFS network is a participatory and collaborative one — if nobody has the content identified by a given address, it won’t be available. On the other hand, content can’t be removed from IPFS so long as *someone* is interested enough to make it available, whether or not that person is the original author.
-
-
-## It’s all about possession and participation.
-
-While there is lots of complex technology in IPFS, the fundamental ideas are about changing how networks of people and computers communicate: while today’s world-wide-web is structured on *ownership* and *access*, where you get files from whoever owns them and they choose to grant you access, IPFS is based on the ideas of *possession* and *participation*, where many people have each others’ files and *participate* in making them available.
-
-That means IPFS only works well when people are actively participating. If you share a file on your computer, but then turn your computer off, other people won’t be able to access it from you. But if you or others make sure a copy of that file is stored on another computer running IPFS, it will be available more often. By default, your computer participates in sharing a file with others for a limited time after you’ve downloaded it with IPFS. You can *pin* a file to save and permanently share it.
-
-If you want to make sure one of your own files is permanently shared on the internet today, you might use a for-pay file-sharing service like Dropbox. Some people have begun offering similar services based on IPFS called *pinning services*. But since IPFS makes this kind of sharing a built-in feature, you can also collaborate with friends or partner with institutions (for example, museums and libraries might work together) to share each others’ files. We hope IPFS can be the low-level tool that allows a rich fabric of communities, business, and cooperative organizations to all form a distributed web that is much more reliable, robust, and equitable than the one we have today.
+记住，这些情况下地址或链接不会改变，这很重要。IPFS 网络依靠大家的参与和合作——如果没人提供一个地址对应的内容，它就不再可以获得了。另一方面，只要还有 *一个人* 愿意提供，不管他是不是原作者，那个内容就不可能被从 IPFS 网络删除。
 
 
-## Next Steps
+## 一切为了共有和共享。 <!-- 不是一个好翻译 -->
 
-Sounds interesting? We’ll cover [how to use it]({{<relref "introduction/usage.md">}}) next.
+<!-- 整段都应该改一下 -->
+虽然 IPFS 使用了很多复杂的技术，但它的核心思想是改变人和计算机网络的沟通方式：现今的万维网构建于 *所有权* 和 *访问权* 之上，你从文件所有者那里请求文件而他们来选择授予你访问权限；IPFS 是基于 *共有* 和 *共享* 的理念，许多人拥有彼此的文件，并且 *共享* 他们。
+
+这意味着 IPFS 只在人们活跃共享时效果良好。如果你分享自己电脑上的一个文件，但却把电脑关机，其他人无法从你那里获取它。但如果你或其他人确保那个文件的一份拷贝存储在另外一个运行 IPFS 的计算机上，它会变得更容易被获取。默认情况下，在从 IPFS 下载一份文件之后，你的电脑会在一段时间里参与向其他人分享这个文件。你可以 *固定* 一个文件以保存并一直分享它。
+
+在现今的互联网上，如果你想要确保你的文件一直被分享，你可以使用像 Dropbox 这样的付费文件共享服务。有些人在 IPFS 上提供类似的服务，叫做 *固定服务(pinning services)* 。但是既然 IPFS 把分享作为内置功能，你也可以与朋友或合作伙伴（例如：博物馆和图书馆可能相互合作）合作分享彼此的文件。我们希望 IPFS 可以作为底层工具，让社区、商业和合作组织组成复杂的结构，形成一个更可靠、更健壮、比现在更平等的分布式网络。
+
+
+## 下一步
+
+感兴趣吗？接下来我们将介绍[如何使用它]({{<relref "introduction/usage.md">}})。
