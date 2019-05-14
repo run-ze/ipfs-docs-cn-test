@@ -189,8 +189,8 @@ Installation complete!
 
 ### 帮帮我！
 
-如果你遇到任何问题，可以通过 [#ipfs](../#community)
-或 [邮件列表](../#community) 得到帮助。
+如果你遇到任何问题，可以通过 [#ipfs](/#community)
+或 [邮件列表](/#community) 得到帮助。
 
 ### 检查 Go 语言版本
 
