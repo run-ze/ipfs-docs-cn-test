@@ -1,22 +1,25 @@
 ---
-title: Basic Usage
+title: 基础使用
 weight: 3
 ---
 
-## Install IPFS
+## 安装 IPFS
 
-If you haven't done so, your first step is to **install IPFS**! Most people prefer to install a prebuilt package - which you can do on the [IPFS distributions page](https://dist.ipfs.io/#go-ipfs) by clicking "Install go-ipfs" (our reference implementation written in Go) and then following the instructions for [installing from a prebuilt package](../install/#installing-from-a-prebuilt-package).
+如果你还没这样做，那么你的第一步是**安装 IPFS**！大多数人喜欢安装预编译的软件包
+——你可以在 [IPFS 发行页](https://dist.ipfs.io/#go-ipfs) 点击 “Download go-ipfs” <!-- 现在页面上是这样的 -->按钮
+（我们用 Go 语言编写的参考实现），然后按照说明 [安装预编译软件包](../install/#安装预编译软件包)。
 
 <a class="button button-primary" href="https://dist.ipfs.io/#go-ipfs" role="button">
-  Download IPFS for your platform &nbsp;&nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+  下载你平台的 IPFS&nbsp;&nbsp;<i class="fa fa-download" aria-hidden="true"></i>
 </a>
 
+想要其他选择，比如从 *源代码构建* ，或者遇到麻烦？检查 [安装页面](../install) 获得更多选项和疑难解答。
+在这个教程中，如果你遇到任何问题或者卡住了，请随时在 [https://discuss.ipfs.io/](https://discuss.ipfs.io/)
+或 [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs) 寻求帮助。
 
-Looking for other options like *building from source*, or having trouble? Check out our [install page](../install) for more options and troublshooting help. During this tutorial, if you have any questions or get stuck, feel free to ask for help in [https://discuss.ipfs.io/](https://discuss.ipfs.io/) or in [#ipfs on chat.freenode.net](irc://chat.freenode.net/%23ipfs).
+## 初始化仓库
 
-## Initialize the repository
-
-`ipfs` stores all its settings and internal data in a directory called the *repository.* Before using IPFS for the first time, you’ll need to initialize the repository with the `ipfs init` command:
+`ipfs` 把它所有的设置和内部数据保存在一个叫做 *仓库（repository）* 的目录下。在第一次使用 IPFS 之前，你需要使用 `ipfs init` 命令初始化仓库：
 
 ```sh
 > ipfs init
@@ -31,23 +34,24 @@ to get started, enter:
 
 <div class="alert alert-warning">
     <p>
-        If you are running on a server in a data center, you should initialize IPFS with the <code>server</code> profile. This will prevent IPFS from creating a lot of data center-internal traffic trying to discover local nodes:
+        如果你在数据中心的服务器上运行，应该使用服务器的配置文件初始化 IPFS。这会阻止 IPFS 为了发现本地节点而产生大量数据中心内部的流量：
     </p>
 
     <pre><code class="language-sh">&gt; ipfs init --profile server</code></pre>
 
     <p>
-        There are a whole host of other configuration options you may want to set — check <a href="https://github.com/ipfs/go-ipfs/blob/v0.4.15/docs/config.md">the full reference</a> for more.
+        还有一大堆其他你可能想要修改的选项——查看 <a href="https://github.com/ipfs/go-ipfs/blob/v0.4.15/docs/config.md">参考列表</a> 了解更多。
     </p>
 </div>
 
 <div class="alert alert-info">
-    The hash after <code>peer identity: </code> is your node’s ID and will be different from the one shown in the above output. Other nodes on the network use it to find and connect to you. You can run <code>ipfs id</code> at any time to get it again if you need it.
+    <code>peer identity: </code> 之后的散列是你的节点的 ID，会与上面的不一样。网络中的其它节点用它来寻找和连接你。
+    你可以在需要时运行 <code>ipfs id</code> 来再次查看它。
 </div>
 
-Now, try running the command suggested to you in the output of ipfs init. The one that looks like `ipfs cat /ipfs/<HASH>/readme`.
+现在，试着运行 ipfs init 输出中建议的命令，他们看起来像是 `ipfs cat /ipfs/<散列>/readme`。
 
-You should see something like this:
+你会看到这样的输出：
 
 ```
 Hello and Welcome to IPFS!
@@ -79,7 +83,7 @@ Check out some of the other files in this directory:
 
 ```
 
-You can explore other objects in there. In particular, check out `quick-start`:
+你可以探索里面的其它条目，尤其是 `quick-start`：
 
 
 ```sh
@@ -88,9 +92,9 @@ ipfs cat /ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/quick-start
 
 Which will walk you through several interesting examples.
 
-## Going Online
+## 启动
 
-Once you're ready to take things online, run the daemon in another terminal:
+当你准备好启动时，在另一个终端中运行守护程序：
 
 ```sh
 > ipfs daemon
@@ -99,14 +103,13 @@ API server listening on /ip4/127.0.0.1/tcp/5001
 Gateway server listening on /ip4/127.0.0.1/tcp/8080
 ```
 
-Wait for all three lines to appear.
+等到这三行都出现。
 
 <div class="alert alert-info">
-Make note of the tcp ports you get. If they are different, use yours in the commands below.
+注意你得到的 tcp 端口号，如果他们和示例不一样，在下面的命令里使用你获得的。
 </div>
 
-Now, switch back to your original terminal. If you're connected to the network,
-you should be able to see the ipfs addresses of your peers when you run:
+现在，回到之前的终端。如果你已经连接到网络，你应该能在运行下面命令后看到你连接的节点的 ipfs 地址：
 
 ```sh
 > ipfs swarm peers
@@ -116,77 +119,72 @@ you should be able to see the ipfs addresses of your peers when you run:
 /ip4/178.62.8.190/tcp/4002/ipfs/QmdXzZ25cyzSF99csCQmmPZ1NTbWTe8qtKFaZKpZQPdTFB
 ```
 
-These are a combination of `<transport address>/ipfs/<hash-of-public-key>`.
+它们是一组 `<传输地址>/ipfs/<公钥的散列>`。
 
-Now, you should be able to get objects from the network. Try:
+现在你应该能从网络中获取对象。试试：
 
 ```
 ipfs cat /ipfs/QmW2WQi7j6c7UgJTarActp7tDNikE4B2qXtFCfLPdsgaTQ/cat.jpg >cat.jpg
 open cat.jpg
 ```
 
-And, you should be able to give the network objects. Try adding one, and then
-viewing it in your favorite browser. In this example, we are using `curl`
-as our browser, but you can open the IPFS URL in other browsers as well:
+而且你应该能向网络传递对象。试着添加一个，然后在你喜欢的浏览器里查看它。
+在这个例子里，我们拿 curl 当浏览器，但你也可以在浏览器里打开这个 IPFS 地址：
 
 ```
 > hash=`echo "I <3 IPFS -$(whoami)" | ipfs add -q`
 > curl "https://ipfs.io/ipfs/$hash"
-I <3 IPFS -<your username>
+I <3 IPFS -<你的用户名>
 ```
 
-Cool, huh? The gateway served a file _from your computer_. The gateway queried
-the DHT, found your machine, requested the file, your machine sent it to the
-gateway, and the gateway sent it to your browser.
+很酷，是吧？那个网关从 _你的电脑_ 提供了一个文件。那个网关查询了 DHT，找到了你的机器，请求了那个文件，
+你的机器把文件发给网关，然后网关把文件发给你的浏览器。
 
 <div class="alert alert-warning">
-    Note: depending on the state of the network, <code>curl</code> may take a while. The public gateways may be overloaded or having a hard time reaching you.
+    注意：取决于网络状态，`curl` 可能会花一些时间。那个公共网关也可能过载或者难以连接到你。
 </div>
 
-You can also check it out at your own local gateway:
+你也可以在自己的本地网关尝试：
 
 ```
 > curl "http://127.0.0.1:8080/ipfs/$hash"
-I <3 IPFS -<your username>
+I <3 IPFS -<你的用户名>
 ```
 
-By default, your gateway is not exposed to the world, it only works locally.
+你的网关默认不向外部世界开放，它只对本地工作。
 
-## Fancy Web Console
+## 优秀的网页控制台
 
-We also have a web console you can use to check the state of your node.
-On your favorite web browser, go to:
+我们也有一个网页控制台，可以用来检查你的节点的状态。打开你喜欢的浏览器，前往：
 
 <pre><code><a href="http://localhost:5001/webui">http://localhost:5001/webui</a></code></pre>
 
-This should bring up a console like this:
+它会显示一个像这样的控制台：
 
 <figure>
     <img class="screenshot" alt="Web console connection view" src="../assets/webui-connection.png">
 </figure>
 
-## Companion Browser Extension
+## 浏览器伴侣插件
 
-While we are at it,  [IPFS Companion](https://github.com/ipfs-shipyard/ipfs-companion#ipfs-companion) is a
-browser extension that simplifies access to IPFS resources and adds support for
-the IPFS protocol.
+此外，[IPFS 伴侣](https://github.com/ipfs-shipyard/ipfs-companion#ipfs-companion)
+是一个简化对 IPFS 资源的访问、添加 IPFS 协议支持的浏览器插件。
 
 <div class="alert alert-info">
-It will automatically redirect IPFS gateway requests to
-your local daemon so that you are not relying on, or trusting, remote gateways.
+它会自动重定向对 IPFS 网关的请求到你本地的守护程序，这样你就无需依赖，或者说信任远程网关。
 </div>
 
-It runs in Firefox (Desktop and Android)
-and various Chromium-based browsers such as Google Chrome or Brave.
-Check [its features](https://github.com/ipfs-shipyard/ipfs-companion#features) and [**install it**](https://github.com/ipfs-shipyard/ipfs-companion#install) today!
+他可以在 Firefox（桌面版和安卓版）和许多像 Google Chrome 或 Brave 这样基于 Chromium 的浏览器中运行。
+查看 [它的功能](https://github.com/ipfs-shipyard/ipfs-companion#features)
+并且立即 [**安装它**](https://github.com/ipfs-shipyard/ipfs-companion#install)！
 
 | <img src="../assets/firefox_16x16.png" widgth="16" height="16"> [Firefox](https://www.mozilla.org/firefox/new/) / <img src="../assets/firefox_16x16.png" widgth="16" height="16"> [Firefox for Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox) | <img src="../assets/chrome_16x16.png" width="16" height="16"> [Chrome](https://www.google.com/chrome/) / <img src="../assets/brave_16x16.png" width="16" height="16"> [Brave](https://brave.com/)
 |------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [![Install From Firefox Add-ons](../assets/get-the-firefox-add-on.png)](https://addons.mozilla.org/firefox/addon/ipfs-companion/) | [![Install from Chrome Store](../assets/chrome-web-store.png)](https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch) |
 
 
-Now, you're ready:
+现在，你已经准备好：
 
 <a class="button button-primary" href="{{< ref "/guides/examples" >}}" role="button">
-  Onward to more Examples &nbsp;&nbsp;<i class="fa fa-arrow-right"></i>
+  查看更多例子&nbsp;&nbsp;<i class="fa fa-arrow-right"></i>
 </a>
