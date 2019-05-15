@@ -1,42 +1,39 @@
 ---
-title: Git, Even More Distributed
+title: 更加分布式的 Git
 ---
 
-Have you ever said to yourself: "Man, my git server isn't distributed enough" or
-"I wish I had an easy way to serve a static git repository worldwide". Well wish
-no more, I have the solution for you!
+你有没有对自己说过：“伙计，我的 git 服务器不够分布式”或“我期望有一个简单的方法来提供全世界可用的静态 git 仓库”。
+不用再期望了，我为你找到了解决方法！
 
-In this article, I will be discussing how to serve a git repository through the
-ipfs network. The end result will be a `git clone`able url served through ipfs!
+在本文中，我将讨论如何使用 ipfs 网络提供 git 仓库服务。
+最终的结果将是一个 ipfs 支撑的可以使用 `git clone` 的地址！
 
-To start, select a git repository you want to host, and do a bare clone of it:
+首先，选择你想要托管的那个 git 仓库，然后做一个它的裸克隆：
 ```
 $ git clone --bare git@myhost.io/myrepo
 ```
 
-For those who aren't super git savvy, a bare repository means that it doesn't have
-a working tree, and can be used as a server. They have a slightly different
-format than your normal git repository.
+如果你不了解 git，一个裸仓库表示它没有工作目录、可以作为服务器。
+它的格式与一般的 git 仓库略有不同。
 
-Now, to get it ready to be cloned, you need to do the following:
+现在，为了让它准备好被克隆，你需要做以下操作：
 ```
 $ cd myrepo
 $ git update-server-info
 ```
 
-Optionally, you can unpack all of gits objects:
+可选地，你可以解压所有 git 对象：
 ```
 $ cp objects/pack/*.pack .
 $ git unpack-objects < ./*.pack
 $ rm ./*.pack
 ```
 
-Doing this breaks up gits large packfile into all of its individual objects.
-This will allow ipfs to deduplicate objects if you add multiple versions of
-this git repository.
+这样做会把 git 的大型打包文件分解为独立的对象。
+如果你添加了这个存储库的多个版本，这会允许 ipfs 去除重复的对象。
 
-Once you've done that, that repository is ready to be served. All thats left to do, is
-to add it to ipfs:
+当你做完后，那个仓库已经准备好提供服务了。
+剩下要做的就是把它添加到 ipfs：
 ```
 $ pwd
 /code/myrepo
@@ -47,38 +44,39 @@ $ ipfs add -r .
 added QmX679gmfyaRkKMvPA4WGNWXj9PtpvKWGPgtXaF18etC95 .
 ```
 
-Now, all thats left is to try cloning it:
+现在可以尝试克隆它了：
 ```
 $ cd /tmp
 $ git clone http://localhost:8080/ipfs/QmX679gmfyaRkKMvPA4WGNWXj9PtpvKWGPgtXaF18etC95 myrepo
 ```
 
-Note: make sure to change out that hash for yours.
+注意：把那个散列改成你的。
 
-Now, you may be asking "well what good is a git repository that I can't change anything on?"
-Well let me tell you an awesome use case! I tend to program in a language called Go,
-for those who don't know go uses version control paths for its imports, i.e:
+现在，你可能会问：“如果一个 git 仓库不能更改，那么它有什么用处呢？”
+让我告诉你一个很棒的用例！
+我喜欢用一种叫 Go 的语言编程，如果你不了解它，go 使用版本控制路径进行导入，比如：
 ```go
 import (
 	"github.com/whyrusleeping/mycoollibrary"
 )
 ```
 
-This is a really nice feature, and solves a lot of problems, but often times, I run into
-the issue where im using someones library, and they change the API, and it breaks my code.
-Using what we've done above, you could clone the library, and add it into ipfs, so your import
-paths will now look something like:
+这是一个很棒的特性，解决了很多问题。但有时我会遇到问题，我使用了某人的库，但是他们改变了 API，这就影响了我的代码。
+使用我们上面做的，你可以克隆这个库，把它添加到 ipfs，这样你的导入路径看起来像下面这样：
 ```go
 import (
 	mylib "gateway.ipfs.io/ipfs/QmX679gmfyaRkKMvPA4WGNWXj9PtpvKWGPgtXaF18etC95"
 )
 ```
 
-And you will be guaranteed to have the same code every time!
+这样你就能确保每次都获取到相同的代码！
 
 Note: Since go doesn't allow the usage of localhost for import paths, we use the
 public http gateways. This provides no security guarantees as a man in the
 middle attack could ship you bad code. You could use a domain name that redirects
 to the localhost instead to avoid the issue.
+注意：因为 go 不允许使用 localhost 作为导入路径，所以我们使用了公共 http 网关。
+这没有提供安全保证，因为可以通过中间人攻击可以发给你有问题的代码。
+你可以使用重定向到 localhost 的域名来避免这个问题。
 
 By [whyrusleeping](http://github.com/whyrusleeping)
