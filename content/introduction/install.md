@@ -12,7 +12,7 @@ Note there are pending PRs for that document that will need to be included here:
 
 -->
 
-有许多把 IPFS 安装到您的系统的方法。我们一般推荐 [安装预编译软件包](#安装预编译软件包)，但还有一些其他支持的选择：
+有许多把 IPFS 安装到你的系统的方法。我们一般推荐 [安装预编译软件包](#安装预编译软件包)，但还有一些其他支持的选择：
 
 * [安装预编译软件包](#安装预编译软件包)（推荐）
 * [使用 ipfs-update 安装](#使用-ipfs-update-安装)
