@@ -1,5 +1,5 @@
 ---
-title: Basic Examples
+title: 基本示例
 layout: examples
 menu:
     guides:
@@ -8,10 +8,10 @@ menu:
 ---
 
 <div class="alert alert-info">
-Our interactive tutorials help you learn about the the decentralized web by writing code and solving challenges:
+我们的交互式教程会通过写代码和解决挑战来帮你学习分布式网络：
 <a class="button button-primary" href="https://proto.school/#/tutorials" role="button" target="_blank">
-  Open Tutorials at ProtoSchool &nbsp;&nbsp;<i class="fa fa-external-link-square-alt"></i>
+  打开位于 ProtoSchool 的教程&nbsp;&nbsp;<i class="fa fa-external-link-square-alt"></i>
 </a>
 </div>
 
-These are a few examples that cover various ways to use IPFS.
+这里有一些展示了多种使用 IPFS 方式的示例。
