@@ -1,13 +1,12 @@
 ---
-title: Configuring Your Node
+title: 配置你的节点
 ---
 
-ipfs is configured through a json formatted text file, located by default at
-`~/.ipfs/config`.
+ipfs 是通过一个 json 格式文本文件配置的，这个文件默认位于 `~/.ipfs/config`。
 
-### Addresses
-The config file stores a few different address types, all of which use the
-multiaddr addressing format. Lets go over what each address type means.
+### 地址
+配置文件里保存着数种不同类型的地址，他们都使用 multiaddr 地址格式。
+下面我们看一下每个类型地址的含义。
 
 ```
 "Addresses": {
@@ -19,35 +18,27 @@ multiaddr addressing format. Lets go over what each address type means.
   }
 ```
 
-#### Swarm
-Swarm addresses are addresses that the local daemon will listen on for
-connections from other ipfs peers. You should try to ensure that these
-addresses can be dialed from a separate computer and that there are no
-firewalls blocking the ports you specify.
+#### 集群
+集群地址是本地守护程序将用来监听来自其他 ipfs 节点的链接的地址。
+你应该确保这些地址可以从别的计算机连接，并且你指定的端口没有被防火墙阻止。
 
 #### API
-The API address is the address that the daemon will serve the http API from.
-This API is used to control the daemon through the command line, or simply
-via curl if you're feeling adventurous. You should ensure that this address
-is not dialable from outside of your machine, or other potentially malicious
-parties may be able to send commands to your ipfs daemon.
+API 地址是守护程序提供 http API 服务的地址。
+这个 API 是用来通过命令行控制守护程序，如果你喜欢冒险，也可以直接通过 curl 进行控制。
+你应该确保这个地址不能从你的机器以外访问，否则其他潜在的有恶意者可能能够向你的 ipfs 守护程序发送命令。
 
-#### Gateway
-The Gateway address is the address that the daemon will serve the gateway
-interface from. The gateway may be used to view files through ipfs, and serve
-static web content. This port may or may not be dialable from outside of your
-machine, thats entirely up to you. The gateway address is optional, if you
-leave it blank, the gateway server will not start.
+#### 网关
+网关地址是守护程序提供网关接口服务的地址。
+网关可用于通过 ipfs 查看文件，并提供静态网页。
+这个端口能与不能从外部访问完全取决于你。
+网关地址是可选的，如果保持空白，网关服务器将不会启动。
 
-### Mounts
-The mounts config values specifies the default mount points for the ipfs and
-ipns virtual file systems, if no other directories are specified by the
-`ipfs mount` command. These folders should exist, and have permissions for your
-user to be able to mount to them via fuse.
+### 挂载
+如果没有用 `ipfs mount` 指定其他目录，那么挂载设置将指定 ipfs 和 ipns 虚拟文件系统的默认挂载点。
+这些文件夹应该存在，并且您的用户应该有权限通过 fuse 挂载它们。
 
-### Bootstrap
-The Bootstrap config array specifies the list of ipfs peers that your daemon
-will connect to on startup. The default values for this are the 'ipfs solarnet'
-nodes, which are a set of VPS servers distributed around the country.
+### 引导
+引导配置数组指定了你的守护程序将会在启动时连接的 ipfs 节点列表。
+默认值是‘ipfs solarnet’节点，它们是一组分布在全国各地的服务器。
 
 By [whyrusleeping](http://github.com/whyrusleeping)
