@@ -43,6 +43,8 @@ jobs:
             git checkout gh-pages
 
             echo "mv -f /tmp/workspace/$BUILD_DIR/* /tmp/workspace/repo"
+            rm -rf /tmp/workspace/repo/*
+
             mv -f /tmp/workspace/$BUILD_DIR/* /tmp/workspace/repo
 
             echo "git add ."
