@@ -33,11 +33,6 @@ jobs:
       - run:
           name: Deploy website to IPFS
           command: |
-            if [ "$CIRCLE_BRANCH" == "gh-pages" ] ; then
-              echo "emit branch $CIRCLE_BRANCH"
-              exit
-            fi
-
             echo "cd /tmp/workspace/repo"
             cd /tmp/workspace/repo
 
@@ -63,7 +58,15 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
       - deploy:
           requires:
             - build
+          filters:
+            branches:
+              only:
+                - master
