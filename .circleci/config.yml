@@ -34,19 +34,29 @@ jobs:
           name: Deploy website to IPFS
           command: |
             if [ "$CIRCLE_BRANCH" == "gh-pages" ] ; then
+              echo "emit branch $CIRCLE_BRANCH"
               exit
             fi
 
+            echo "cd /tmp/workspace/repo"
             cd /tmp/workspace/repo
 
+            git config user.email "me@lirunze.xyz"
+            git config user.name "Circle CI"
+
+            echo "checkout gh-pages"
             git checkout gh-pages
 
+            echo "mv -f /tmp/workspace/$BUILD_DIR/* /tmp/workspace/repo"
             mv -f /tmp/workspace/$BUILD_DIR/* /tmp/workspace/repo
 
+            echo "git add ."
             git add .
 
+            echo "git commit -m "Circle CI build $CIRCLE_BUILD_NUMBER""
             git commit -m "Circle CI build $CIRCLE_BUILD_NUMBER"
 
+            echo "git push origin gh-pages"
             git push origin gh-pages
 
 workflows:
