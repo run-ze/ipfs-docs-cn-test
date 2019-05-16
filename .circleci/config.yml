@@ -16,35 +16,35 @@ jobs:
           paths:
             - public
 
-  deploy:
-    docker:
-      - image: olizilla/ipfs-dns-deploy:latest
-        environment:
-          DOMAIN: docs.ipfs.io
-          BUILD_DIR: public
-    steps:
-      - attach_workspace:
-          at: /tmp/workspace
-      - run:
-          name: Deploy website to IPFS
-          command: |
-            pin_name="$DOMAIN build $CIRCLE_BUILD_NUMBER"
+#   deploy:
+#     docker:
+#       - image: olizilla/ipfs-dns-deploy:latest
+#         environment:
+#           DOMAIN: zh-cn.help
+#           BUILD_DIR: public
+#     steps:
+#       - attach_workspace:
+#           at: /tmp/workspace
+#       - run:
+#           name: Deploy website to IPFS
+#           command: |
+#             pin_name="$DOMAIN build $CIRCLE_BUILD_NUMBER"
 
-            hash=$(pin-to-cluster.sh "$pin_name" /tmp/workspace/$BUILD_DIR)
+#             hash=$(pin-to-cluster.sh "$pin_name" /tmp/workspace/$BUILD_DIR)
 
-            echo "Website added to IPFS: https://ipfs.io/ipfs/$hash"
+#             echo "Website added to IPFS: https://ipfs.io/ipfs/$hash"
 
-            # Update DNSlink for prod or dev domain
-            if [ "$CIRCLE_BRANCH" == "master" ] ; then
-              dnslink-dnsimple -d $DOMAIN -r _dnslink -l /ipfs/$hash
-            fi
+#             # Update DNSlink for prod or dev domain
+#             if [ "$CIRCLE_BRANCH" == "master" ] ; then
+#               dnslink-dnsimple -d $DOMAIN -r _dnslink -l /ipfs/$hash
+#             fi
 
-workflows:
-  version: 2
-  build-deploy:
-    jobs:
-      - build
-      - deploy:
-          context: ipfs-dns-deploy
-          requires:
-            - build
+# workflows:
+#   version: 2
+#   build-deploy:
+#     jobs:
+#       - build
+#       - deploy:
+#           context: ipfs-dns-deploy
+#           requires:
+#             - build
