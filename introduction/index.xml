@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>介绍 on IPFS Documentation</title>
+    <link>https://docs.ipfs.io/introduction/</link>
+    <description>Recent content in 介绍 on IPFS Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://docs.ipfs.io/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IPFS 是什么？</title>
+      <link>https://docs.ipfs.io/introduction/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/introduction/overview/</guid>
+      <description>欢迎！如果你是 IPFS 的新手，那么你来对地方了。本指南旨在向你全面而快速地概述 IPFS 是什么、它是如何工作的以及如何使用它。
+IPFS 是一个用于存储和访问文件、网站、应用和数据的分布式系统。 这到底是什么意思？假设你正在研究食蚁兽。（食蚁兽很酷！你知道它们能在 5 分钟内挖 3 英尺吗？）你可能从访问食蚁兽的维基百科开始： https://zh.wikipedia.org/wiki/食蚁兽  当你在浏览器的地址栏输入这个 URL 时，你的电脑会向维基百科的一台电脑请求食蚁兽页面，这台电脑可能在国家的另一边，甚至可能在地球的另一边。但是如果你使用 IPFS 从以下网站获取该页面：
+/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html  你的电脑可能是从镇上其他人的电脑，或者甚至是街对面邻居的电脑上得到的。当你使用 IPFS 时，你不仅可以从别人那里下载文件，而且你的电脑也可以帮助分发文件——当你几个街区以外的朋友需要同一个维基百科页面时，他们可能会像你的邻居一样从你那里获取文件。
+IPFS 不只可以用于网页，也可以用于计算机可能存储的任何类型的文件，无论是 MS Word 文档、电子邮件、MP3 文件，甚至是数据库记录。
+这又怎样呢？ 使从不被同一个组织管理的多个地点下载一个文件成为可能……
+ 让一个网站很难离线。如果有人攻击维基百科的网络服务器，或者维基百科的工程师犯了一个大错误，导致他们的服务器着火，你仍然可以从其他地方获取相同的页面。
+ 使当局更难审查内容。因为 IPFS 上的文件可以来自许多地方，而且其中一些地方可能就在附近，所以当局（无论是州、公司还是其他人）很难屏蔽这些内容。2017 年，土耳其封锁了维基百科，西班牙封锁了访问加泰罗尼亚独立网站的途径。我们希望 IPFS 能够阻止这样的行为。
+ 当你断网或者距离很远时，可以加快网络速度。如果你能从附近的某个人而非几百或者几千英里以外的地方获取文件，你就可以得到更快的速度。（有足够资金和专业知识的组织可以通过 CDN 或多个数据中心来做到这一点，但 IPFS 的目标是让每个人都能做到这一点。）如果你的社区虽然联网，但是与更广泛的互联网连接不好，那么这就特别有价值了。
+  最后一点，也是 IPFS 名称的由来：星际文件系统！我们正在努力建立一个系统，能跨越像其他星球那样互不相连或者相距甚远的地方。这是一个相当理想化的目标，但它让我们努力工作和思考，而且我们为了追求这个目标而创造的大多数东西在离家更近的地方也是有用的。
+IPFS 上的链接不会改变。 上面的独角兽页面的链接怎么样？它看起来有点不同寻常：
+/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html  /ipfs/后面的一堆字母被称为内容识别码(content identifier)，它是 IPFS 可以从多个地方获取内容的原因。 传统的 URL 和文件路径，比如：
+ https://zh.wikipedia.org/wiki/食蚁兽 /Users/Alice/Documents/term_paper.doc C:\Users\Joe\My Documents\project_sprint_presentation.ppt  根据 文件的位置 来识别文件——它在哪台计算机上、它在那台计算机上的什么位置。但是如果文件有很多位置，比如你邻居的电脑和和城市另一边你朋友的电脑上，它就没用了。</description>
+    </item>
+    
+    <item>
+      <title>安装 IPFS</title>
+      <link>https://docs.ipfs.io/introduction/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/introduction/install/</guid>
+      <description>有许多把 IPFS 安装到你的系统的方法。我们一般推荐 安装预编译软件包，但还有一些其他支持的选择：
+ 安装预编译软件包（推荐） 使用 ipfs-update 安装 从源代码构建 升级 IPFS 疑难解答  请注意这些说明使用命令行。我们用 $ 表示命令提示符—以它开头的行表示需要输入的命令，不以它开头则表示命令的输出。
+安装预编译软件包 首先，下载你的平台对应版本的 IPFS：
+下载你平台的 IPFS&amp;nbsp;&amp;nbsp; 
+Mac OS X 和 Linux 下载完成之后，解压档案，然后用 install.sh 把 ipfs 可执行文件移动到 $PATH 环境变量里的路径下：
+$ tar xvfz go-ipfs.tar.gz $ cd go-ipfs $ ./install.sh  测试一下：
+$ ipfs help USAGE: ipfs - Global p2p merkle-dag filesystem. ...  恭喜！你的电脑已经安装好 IPFS 了。
+日常使用&amp;nbsp;&amp;nbsp; 
+Windows 下载完之后，解压档案，然后把 ipfs.exe 移动到 %PATH% 环境变量里的路径下。</description>
+    </item>
+    
+    <item>
+      <title>基础使用</title>
+      <link>https://docs.ipfs.io/introduction/usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/introduction/usage/</guid>
+      <description>安装 IPFS 如果你还没这样做，那么你的第一步是安装 IPFS！大多数人喜欢安装预编译的软件包 ——你可以在 IPFS 发行页 点击 “Download go-ipfs” 按钮 （我们用 Go 语言编写的参考实现），然后按照说明 安装预编译软件包。
+下载你平台的 IPFS&amp;nbsp;&amp;nbsp; 
+想要其他选择，比如从 源代码构建 ，或者遇到麻烦？检查 安装页面 获得更多选项和疑难解答。 在这个教程中，如果你遇到任何问题或者卡住了，请随时在 https://discuss.ipfs.io/ 或 #ipfs on chat.freenode.net 寻求帮助。
+初始化仓库 ipfs 把它所有的设置和内部数据保存在一个叫做 仓库（repository） 的目录下。在第一次使用 IPFS 之前，你需要使用 ipfs init 命令初始化仓库：
+&amp;gt; ipfs init initializing ipfs node at /Users/jbenet/.go-ipfs generating 2048-bit RSA keypair...done peer identity: Qmcpo2iLBikrdf1d6QU6vXuNb6P7hwrbNPW9kLAH8eG67z to get started, enter: ipfs cat /ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/readme   如果你在数据中心的服务器上运行，应该使用服务器的配置文件初始化 IPFS。这会阻止 IPFS 为了发现本地节点而产生大量数据中心内部的流量： &amp;gt; ipfs init --profile server  还有一大堆其他你可能想要修改的选项——查看 参考列表 了解更多。  peer identity:  之后的散列是你的节点的 ID，会与上面的不一样。网络中的其它节点用它来寻找和连接你。 你可以在需要时运行 ipfs id 来再次查看它。  现在，试着运行 ipfs init 输出中建议的命令，他们看起来像是 ipfs cat /ipfs/&amp;lt;散列&amp;gt;/readme。</description>
+    </item>
+    
+    <item>
+      <title>常见问题</title>
+      <link>https://docs.ipfs.io/introduction/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/introduction/faq/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

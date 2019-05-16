@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reference on IPFS Documentation</title>
+    <link>https://docs.ipfs.io/reference/</link>
+    <description>Recent content in Reference on IPFS Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://docs.ipfs.io/reference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Working with Go IPFS</title>
+      <link>https://docs.ipfs.io/reference/go/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/reference/go/overview/</guid>
+      <description>go-ipfs is the primary reference implementation of IPFS. It is a command-line application, but can also be used as a library in other Go programs.
+For more about using the ipfs application, see basic usage or any of the following reference documents:
+ Configuration reference  Datastore configuration Experimental features  Installing command completion Mounting IPFS with FUSE Installing plugins  For more technical information about building, debugging or using the API, see:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IPFS 文档 on IPFS Documentation</title>
+    <link>https://docs.ipfs.io/</link>
+    <description>Recent content in IPFS 文档 on IPFS Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://docs.ipfs.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IPFS 是什么？</title>
+      <link>https://docs.ipfs.io/introduction/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/introduction/overview/</guid>
+      <description>欢迎！如果你是 IPFS 的新手，那么你来对地方了。本指南旨在向你全面而快速地概述 IPFS 是什么、它是如何工作的以及如何使用它。
+IPFS 是一个用于存储和访问文件、网站、应用和数据的分布式系统。 这到底是什么意思？假设你正在研究食蚁兽。（食蚁兽很酷！你知道它们能在 5 分钟内挖 3 英尺吗？）你可能从访问食蚁兽的维基百科开始： https://zh.wikipedia.org/wiki/食蚁兽  当你在浏览器的地址栏输入这个 URL 时，你的电脑会向维基百科的一台电脑请求食蚁兽页面，这台电脑可能在国家的另一边，甚至可能在地球的另一边。但是如果你使用 IPFS 从以下网站获取该页面：
+/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html  你的电脑可能是从镇上其他人的电脑，或者甚至是街对面邻居的电脑上得到的。当你使用 IPFS 时，你不仅可以从别人那里下载文件，而且你的电脑也可以帮助分发文件——当你几个街区以外的朋友需要同一个维基百科页面时，他们可能会像你的邻居一样从你那里获取文件。
+IPFS 不只可以用于网页，也可以用于计算机可能存储的任何类型的文件，无论是 MS Word 文档、电子邮件、MP3 文件，甚至是数据库记录。
+这又怎样呢？ 使从不被同一个组织管理的多个地点下载一个文件成为可能……
+ 让一个网站很难离线。如果有人攻击维基百科的网络服务器，或者维基百科的工程师犯了一个大错误，导致他们的服务器着火，你仍然可以从其他地方获取相同的页面。
+ 使当局更难审查内容。因为 IPFS 上的文件可以来自许多地方，而且其中一些地方可能就在附近，所以当局（无论是州、公司还是其他人）很难屏蔽这些内容。2017 年，土耳其封锁了维基百科，西班牙封锁了访问加泰罗尼亚独立网站的途径。我们希望 IPFS 能够阻止这样的行为。
+ 当你断网或者距离很远时，可以加快网络速度。如果你能从附近的某个人而非几百或者几千英里以外的地方获取文件，你就可以得到更快的速度。（有足够资金和专业知识的组织可以通过 CDN 或多个数据中心来做到这一点，但 IPFS 的目标是让每个人都能做到这一点。）如果你的社区虽然联网，但是与更广泛的互联网连接不好，那么这就特别有价值了。
+  最后一点，也是 IPFS 名称的由来：星际文件系统！我们正在努力建立一个系统，能跨越像其他星球那样互不相连或者相距甚远的地方。这是一个相当理想化的目标，但它让我们努力工作和思考，而且我们为了追求这个目标而创造的大多数东西在离家更近的地方也是有用的。
+IPFS 上的链接不会改变。 上面的独角兽页面的链接怎么样？它看起来有点不同寻常：
+/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Aardvark.html  /ipfs/后面的一堆字母被称为内容识别码(content identifier)，它是 IPFS 可以从多个地方获取内容的原因。 传统的 URL 和文件路径，比如：
+ https://zh.wikipedia.org/wiki/食蚁兽 /Users/Alice/Documents/term_paper.doc C:\Users\Joe\My Documents\project_sprint_presentation.ppt  根据 文件的位置 来识别文件——它在哪台计算机上、它在那台计算机上的什么位置。但是如果文件有很多位置，比如你邻居的电脑和和城市另一边你朋友的电脑上，它就没用了。</description>
+    </item>
+    
+    <item>
+      <title>安装 IPFS</title>
+      <link>https://docs.ipfs.io/introduction/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/introduction/install/</guid>
+      <description>有许多把 IPFS 安装到你的系统的方法。我们一般推荐 安装预编译软件包，但还有一些其他支持的选择：
+ 安装预编译软件包（推荐） 使用 ipfs-update 安装 从源代码构建 升级 IPFS 疑难解答  请注意这些说明使用命令行。我们用 $ 表示命令提示符—以它开头的行表示需要输入的命令，不以它开头则表示命令的输出。
+安装预编译软件包 首先，下载你的平台对应版本的 IPFS：
+下载你平台的 IPFS&amp;nbsp;&amp;nbsp; 
+Mac OS X 和 Linux 下载完成之后，解压档案，然后用 install.sh 把 ipfs 可执行文件移动到 $PATH 环境变量里的路径下：
+$ tar xvfz go-ipfs.tar.gz $ cd go-ipfs $ ./install.sh  测试一下：
+$ ipfs help USAGE: ipfs - Global p2p merkle-dag filesystem. ...  恭喜！你的电脑已经安装好 IPFS 了。
+日常使用&amp;nbsp;&amp;nbsp; 
+Windows 下载完之后，解压档案，然后把 ipfs.exe 移动到 %PATH% 环境变量里的路径下。</description>
+    </item>
+    
+    <item>
+      <title>基础使用</title>
+      <link>https://docs.ipfs.io/introduction/usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/introduction/usage/</guid>
+      <description>安装 IPFS 如果你还没这样做，那么你的第一步是安装 IPFS！大多数人喜欢安装预编译的软件包 ——你可以在 IPFS 发行页 点击 “Download go-ipfs” 按钮 （我们用 Go 语言编写的参考实现），然后按照说明 安装预编译软件包。
+下载你平台的 IPFS&amp;nbsp;&amp;nbsp; 
+想要其他选择，比如从 源代码构建 ，或者遇到麻烦？检查 安装页面 获得更多选项和疑难解答。 在这个教程中，如果你遇到任何问题或者卡住了，请随时在 https://discuss.ipfs.io/ 或 #ipfs on chat.freenode.net 寻求帮助。
+初始化仓库 ipfs 把它所有的设置和内部数据保存在一个叫做 仓库（repository） 的目录下。在第一次使用 IPFS 之前，你需要使用 ipfs init 命令初始化仓库：
+&amp;gt; ipfs init initializing ipfs node at /Users/jbenet/.go-ipfs generating 2048-bit RSA keypair...done peer identity: Qmcpo2iLBikrdf1d6QU6vXuNb6P7hwrbNPW9kLAH8eG67z to get started, enter: ipfs cat /ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/readme   如果你在数据中心的服务器上运行，应该使用服务器的配置文件初始化 IPFS。这会阻止 IPFS 为了发现本地节点而产生大量数据中心内部的流量： &amp;gt; ipfs init --profile server  还有一大堆其他你可能想要修改的选项——查看 参考列表 了解更多。  peer identity:  之后的散列是你的节点的 ID，会与上面的不一样。网络中的其它节点用它来寻找和连接你。 你可以在需要时运行 ipfs id 来再次查看它。  现在，试着运行 ipfs init 输出中建议的命令，他们看起来像是 ipfs cat /ipfs/&amp;lt;散列&amp;gt;/readme。</description>
+    </item>
+    
+    <item>
+      <title>CLI Commands</title>
+      <link>https://docs.ipfs.io/reference/api/cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/reference/api/cli/</guid>
+      <description>Note: IPFS can run in either “online” (you have IPFS running separately as a daemon process) or “offline” mode, but some commands are only supported when online. For example ipfs swarm peers only works in online mode because you won’t be connected to a swarm at all if you’re offline. For more about running IPFS as a daemon, see “going online” in the usage documentation.
+Generated on 2018-04-09 13:54:54.079504</description>
+    </item>
+    
+    <item>
+      <title>HTTP API</title>
+      <link>https://docs.ipfs.io/reference/api/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/reference/api/http/</guid>
+      <description>Generated on 2019-04-26, from go-ipfs v0.4.20.
+When an IPFS node is running as a daemon, it exposes an HTTP API that allows you to control the node and run the same commands you can from the command line.
+In many cases, using this API this is preferable to embedding IPFS directly in your program — it allows you to maintain peer connections that are longer lived than your app and you can keep a single IPFS node running instead of several if your app can be launched multiple times.</description>
+    </item>
+    
+    <item>
+      <title>Content Identifiers (CIDs)</title>
+      <link>https://docs.ipfs.io/guides/concepts/cid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/cid/</guid>
+      <description>A content identifier, or CID, is a label used to point to material in IPFS. It doesn&amp;rsquo;t indicate where the content is stored, but it forms a kind of address based on the content itself. CIDs are short, regardless of the size of their underlying content.
+CIDs are based on the content’s cryptographic hash. That means:
+ Any difference in content will produce a different CID and The same piece of content added to two different IPFS nodes using the same settings will produce exactly the same CID.</description>
+    </item>
+    
+    <item>
+      <title>DNSLink</title>
+      <link>https://docs.ipfs.io/guides/concepts/dnslink/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/dnslink/</guid>
+      <description>DNSLink uses DNS TXT records to map a domain name (like ipfs.io) to an IPFS address. Because you can edit your DNS records, you can use them to always point to the latest version of an object in IPFS (remember that an IPFS object’s address changes if you modify the object). Because DNSLink uses DNS records, the names it produces are also usually easy to type and read.
+A DNSLink address looks like an IPNS address, but it uses a domain name in place of a hashed public key:</description>
+    </item>
+    
+    <item>
+      <title>Hashes</title>
+      <link>https://docs.ipfs.io/guides/concepts/hashes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/hashes/</guid>
+      <description>Hashes are functions that take some arbitrary input and return a fixed-length value. The particular value depends on the given hash algorithm in use, such as SHA-1 (used by Git), SHA-256, or BLAKE2, but a given hash algorithm always returns the same value for a given input. Have a look at the full list of hash functions for more.
+As an example, the input:
+Hello world  would be represented by SHA-1 as:</description>
+    </item>
+    
+    <item>
+      <title>How to Help</title>
+      <link>https://docs.ipfs.io/community/contribute/how_to_help/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/community/contribute/how_to_help/</guid>
+      <description>So you want to contribute to IPFS and the ecosystem? Here is a quick listing of things we need help with and how you can get started. Even if what you want to do is not listed here, we probably accept contributions for it! If you&amp;rsquo;re unsure, please open a issue.
+Areas of contribution  Code Documentation Support Testing Design Issues / Triaging Community Applications Protocol Design Research  Code IPFS and its sister-projects are big, with lots of code written in multiple languages.</description>
+    </item>
+    
+    <item>
+      <title>IPFS for Websites</title>
+      <link>https://docs.ipfs.io/guides/examples/websites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/websites/</guid>
+      <description>A short guide to hosting your site on IPFS Create your site Assume you have a static website in a directory mysite.
+In order to publish it as a site, make sure your ipfs daemon is running:
+$ ipfs daemon  Then add the directory with your website:
+$ ls mysite img index.html $ ipfs add -r mysite added QmcMN2wqoun88SVF5own7D5LUpnHwDA6ALZnVdFXhnYhAs mysite/img/spacecat.jpg added QmS8tC5NJqajBB5qFhcA1auav14iHMnoMZJWfmr4k3EY6w mysite/img added QmYh6HbZhHABQXrkQZ4aRRSoSa6bb9vaKoHeumWex6HRsT mysite/index.html added QmYeAiiK1UfB8MGLRefok1N7vBTyX8hGPuMXZ4Xq1DPyt7 mysite/  The last hash, next to the folder name, mysite/ is the one to remember, call it $SITE_CID for now.</description>
+    </item>
+    
+    <item>
+      <title>IPNS</title>
+      <link>https://docs.ipfs.io/guides/concepts/ipns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/ipns/</guid>
+      <description>Inter-Planetary Name System (IPNS) is a system for creating and updating mutable links to IPFS content. Since objects in IPFS are content-addressed, their address changes every time their content does. That’s useful for a variety of things, but it makes it hard to get the latest version of something.
+A name in IPNS is the hash of a public key. It is associated with a record containing information about the hash it links to that is signed by the corresponding private key.</description>
+    </item>
+    
+    <item>
+      <title>IRC</title>
+      <link>https://docs.ipfs.io/community/irc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/community/irc/</guid>
+      <description>There are several IRC channels on Freenode dedicated to IPFS, and it’s a great place for live chat:
+ Use #ipfs on irc.freenode.org for general IPFS usage and community chat. Use #ipfs-dev on irc.freenode.org for discussing implementation details, especially if you are contributing code to IPFS.  For longer-lived discussions and for support, please use the discussion forums at https://discuss.ipfs.io instead of IRC! It’s easy for complex discussions to get lost in a sea of new messages on IRC.</description>
+    </item>
+    
+    <item>
+      <title>JS &amp; Go Libraries</title>
+      <link>https://docs.ipfs.io/reference/api/libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/reference/api/libraries/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Making Your Own IPFS Service</title>
+      <link>https://docs.ipfs.io/guides/examples/api/service/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/api/service/readme/</guid>
+      <description>ipfs has a few default services that it runs by default, such as the dht, bitswap, and the diagnostics service. Each of these simply registers a handler on the ipfs PeerHost, and listens on it for new connections. The corenet package has a very clean interface to this functionality. So lets try building an easy demo service to try this out!
+Lets start by building the service host:
+package main import ( &amp;quot;fmt&amp;quot; core &amp;quot;github.</description>
+    </item>
+    
+    <item>
+      <title>Modifying the bootstrap peers list</title>
+      <link>https://docs.ipfs.io/guides/examples/bootstrap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/bootstrap/</guid>
+      <description>The IPFS bootstrap list is a list of peers with which the IPFS daemon learns about other peers on the network. IPFS comes with a default list of trusted peers, but you are free to modify the list to suit your needs. One popular use for a custom bootstrap list is to create a personal IPFS network.
+First, let&amp;rsquo;s list your node&amp;rsquo;s bootstrap list:
+&amp;gt; ipfs bootstrap list /ip4/104.131.131.82/tcp/4001/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ /ip4/104.236.151.122/tcp/4001/ipfs/QmSoLju6m7xTh3DuokvT3886QRYqxAzb1kShaanJgW36yx /ip4/104.</description>
+    </item>
+    
+    <item>
+      <title>Mutable File System (MFS)</title>
+      <link>https://docs.ipfs.io/guides/concepts/mfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/mfs/</guid>
+      <description>Because files in IPFS are content-addressed and immutable, they can be complicated to edit. Mutable File System (MFS) is a tool built into IPFS that lets you treat files like you would a normal name-based filesystem — you can add, remove, move, and edit MFS files and have all the work of updating links and hashes taken care of for you.
+MFS is accessed through the files commands in the IPFS CLI and API.</description>
+    </item>
+    
+    <item>
+      <title>Pinning</title>
+      <link>https://docs.ipfs.io/guides/concepts/pinning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/pinning/</guid>
+      <description>IPFS nodes treat the data they store like a cache, meaning that there is no guarantee that the data will continue to be stored. Pinning a CID tells an IPFS server that the data is important and mustn&amp;rsquo;t be thrown away.
+You should pin any content you consider important, to ensure that content is retained long-term. Since data important to someone else may not be important to you, pinning lets you have control over the disk space and data retention you need.</description>
+    </item>
+    
+    <item>
+      <title>Pinning Files</title>
+      <link>https://docs.ipfs.io/guides/examples/pinning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/pinning/</guid>
+      <description>Pinning is a very important concept in ipfs. ipfs semantics try to make it feel like every single object is local, there is no &amp;ldquo;retrieve this file for me from a remote server&amp;rdquo;, just ipfs cat or ipfs get which act the same way no matter where the actual object is located. While this is nice, sometimes you want to be able to control what you keep around. Pinning is the mechanism that allows you to tell ipfs to always keep a given object local.</description>
+    </item>
+    
+    <item>
+      <title>Playing Videos</title>
+      <link>https://docs.ipfs.io/guides/examples/videos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/videos/</guid>
+      <description>ipfs can be used to store and play videos. Suppose we add a video:
+ipfs add -q sintel.mp4 | tail -n1  Take the resulting hash, You can view it a couple different ways:
+On the command line:
+ipfs cat $vidhash | mplayer -vo xv -  Via local gateway:
+mplayer http://localhost:8080/ipfs/$vidhash # or open it up in a tab in chrome (or firefox) chromium http://localhost:8080/ipfs/$vidhash  (Note: the gateway method works with most video players and browsers)</description>
+    </item>
+    
+    <item>
+      <title>Playing with the Network</title>
+      <link>https://docs.ipfs.io/guides/examples/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/network/</guid>
+      <description>IPFS is all about networking! Included are a useful set of commands to aid in observing the network.
+See who you&amp;rsquo;re directly connected to:
+ipfs swarm peers  Manually connect to a specific peer. If the peer below doesn&amp;rsquo;t work, choose one from the output of ipfs swarm peers.
+ipfs swarm connect /ip4/104.236.176.52/tcp/4001/ipfs/QmSoLnSGccFuZQJzRadHn95W2CrSFmZuTdDWP8HXaHca9z  Search for a given peer on the network:
+ipfs dht findpeer QmSoLnSGccFuZQJzRadHn95W2CrSFmZuTdDWP8HXaHca9z  By whyrusleeping</description>
+    </item>
+    
+    <item>
+      <title>Snapshots</title>
+      <link>https://docs.ipfs.io/guides/examples/snapshots/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/snapshots/</guid>
+      <description>Lets take a quick look at how ipfs can be used to take basic snapshots.
+Save your directory:
+$ ipfs add -r ~/code/myproject  Note the hash:
+$ echo $hash `date` &amp;gt;&amp;gt; snapshots  Or all at once:
+$ echo `ipfs add -q -r ~/code/myproject | tail -n1` `date` &amp;gt;&amp;gt; snapshots  (Note: the -q makes the output only contain the hashes, piping through tail -n1 ensures only the hash of the top folder is output.</description>
+    </item>
+    
+    <item>
+      <title>The Inter-Planetary Naming System</title>
+      <link>https://docs.ipfs.io/guides/examples/ipns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/ipns/</guid>
+      <description>ipns is a way to add a small amount of mutability to the permanent immutability that is ipfs. It allows you to store a reference to an ipfs hash under the namespace of your peerID ( the hash of your public key ). The commands to set it up are quite simple.
+First, you&amp;rsquo;ll need some content to publish:
+$ echo &#39;Let us have some mutable fun!&#39; | ipfs add  Note the hash that was printed out, and use it here to publish it to the network:</description>
+    </item>
+    
+    <item>
+      <title>UnixFS</title>
+      <link>https://docs.ipfs.io/guides/concepts/unixfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/unixfs/</guid>
+      <description>A file in IPFS isn’t just content. It might be too big to fit in a single block, so it needs metadata to link all its blocks together. It might be a symlink or a directory, so it needs metadata to link to other files. UnixFS is the data format used to represent files and all their links and metadata in IPFS, and is loosely based on how files work in Unix.</description>
+    </item>
+    
+    <item>
+      <title>Visualizing objects with graphmd</title>
+      <link>https://docs.ipfs.io/guides/examples/graphmd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/graphmd/</guid>
+      <description>When using ipfs for storing files, or writing more complex datastructures, it is often very useful to visualize the merkledag being created. For this, I wrote a simple tool called graphmd (graph merkle dag).
+graphmd is a very short shell script (source). It uses the ipfs refs --format flag to produce dot output.
+Install graphmd graphmd will be in its own repo soon, but for now you can install it with:</description>
+    </item>
+    
+    <item>
+      <title>Working with Go IPFS</title>
+      <link>https://docs.ipfs.io/reference/go/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/reference/go/overview/</guid>
+      <description>go-ipfs is the primary reference implementation of IPFS. It is a command-line application, but can also be used as a library in other Go programs.
+For more about using the ipfs application, see basic usage or any of the following reference documents:
+ Configuration reference  Datastore configuration Experimental features  Installing command completion Mounting IPFS with FUSE Installing plugins  For more technical information about building, debugging or using the API, see:</description>
+    </item>
+    
+    <item>
+      <title>Working with IPFS in JS</title>
+      <link>https://docs.ipfs.io/reference/js/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/reference/js/overview/</guid>
+      <description>There are two main JavaScript libraries for working with IPFS. Both work in Node.js and in modern web browsers:
+ js-ipfs is a full implementation of IPFS, similar to go-ipfs. You can use it either as a command-line application or as a library to start an IPFS node directly in your program.
+ js-ipfs-http-client is a smaller library that controls an IPFS node that is already running via its HTTP API.</description>
+    </item>
+    
+    <item>
+      <title>go-ipfs-api</title>
+      <link>https://docs.ipfs.io/go/pkg/go-ipfs-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/go/pkg/go-ipfs-api/</guid>
+      <description>Version: gx/v1.3.5
+Source: https://github.com/ipfs/go-ipfs-api/
+import &amp;quot;github.com/ipfs/go-ipfs-api&amp;quot;
+ Overview Index  Overview package shell implements a remote API interface for a running ipfs daemon
+Index  Constants type Error  func (e *Error) Error() string  type IdOutput type IpfsObject type LsLink type LsObject type ObjectLink type ObjectStats type PeerInfo type PeersList type PinInfo type PubSubRecord type PubSubSubscription  func (s *PubSubSubscription) Cancel() error func (s *PubSubSubscription) Next() (PubSubRecord, error)  type PublishResponse type Request  func NewRequest(ctx context.</description>
+    </item>
+    
+    <item>
+      <title>go-ipfs/core/coreapi</title>
+      <link>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/</guid>
+      <description>Version: 0.4.18
+Source: https://github.com/ipfs/go-ipfs/
+import &amp;quot;github.com/ipfs/go-ipfs/core/coreapi&amp;quot;
+ Overview Index  Overview Package coreapi provides direct access to the core commands in IPFS. If you are embedding IPFS directly in your Go program, this package is the public interface you should use to read and write files or otherwise control IPFS.
+If you are running IPFS as a separate process, you should use go-ipfs-api to work with it via HTTP. As we finalize the interfaces here, go-ipfs-api will transparently adopt them so you can use the same code with either package.</description>
+    </item>
+    
+    <item>
+      <title>go-ipfs/core/coreapi/interface</title>
+      <link>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/interface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/interface/</guid>
+      <description>Version: 0.4.18
+Source: https://github.com/ipfs/go-ipfs/
+import &amp;quot;github.com/ipfs/go-ipfs/core/coreapi/interface&amp;quot;
+ Overview Index  Overview Package iface defines IPFS Core API which is a set of interfaces used to interact with IPFS nodes.
+Index  Variables type AddEvent type BadPinNode type BlockAPI type BlockStat type ChangeType type ConnectionInfo type CoreAPI type DagAPI type DagBatch type DagOps type DhtAPI type IpnsEntry type IpnsResult type Key type KeyAPI type NameAPI type ObjectAPI type ObjectChange type ObjectStat type Path  func ParsePath(p string) (Path, error)  type Pin type PinAPI type PinStatus type PubSubAPI type PubSubMessage type PubSubSubscription type ReadSeekCloser type Reader type ResolvedPath  func IpfsPath(c cid.</description>
+    </item>
+    
+    <item>
+      <title>go-ipfs/core/coreapi/interface/options</title>
+      <link>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/interface/options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/interface/options/</guid>
+      <description>Version: 0.4.18
+Source: https://github.com/ipfs/go-ipfs/
+import &amp;quot;github.com/ipfs/go-ipfs/core/coreapi/interface/options&amp;quot;
+ Overview Index  Overview Index  Constants Variables type BlockPutOption type BlockPutSettings  func BlockPutOptions(opts &amp;hellip;BlockPutOption) (*BlockPutSettings, cid.Prefix, error)  type BlockRmOption type BlockRmSettings  func BlockRmOptions(opts &amp;hellip;BlockRmOption) (*BlockRmSettings, error)  type DagPutOption type DagPutSettings  func DagPutOptions(opts &amp;hellip;DagPutOption) (*DagPutSettings, error)  type DagTreeOption type DagTreeSettings  func DagTreeOptions(opts &amp;hellip;DagTreeOption) (*DagTreeSettings, error)  type DhtFindProvidersOption type DhtFindProvidersSettings  func DhtFindProvidersOptions(opts &amp;hellip;DhtFindProvidersOption) (*DhtFindProvidersSettings, error)  type DhtProvideOption type DhtProvideSettings  func DhtProvideOptions(opts &amp;hellip;DhtProvideOption) (*DhtProvideSettings, error)  type KeyGenerateOption type KeyGenerateSettings  func KeyGenerateOptions(opts &amp;hellip;KeyGenerateOption) (*KeyGenerateSettings, error)  type KeyRenameOption type KeyRenameSettings  func KeyRenameOptions(opts &amp;hellip;KeyRenameOption) (*KeyRenameSettings, error)  type Layout type NamePublishOption type NamePublishSettings  func NamePublishOptions(opts &amp;hellip;NamePublishOption) (*NamePublishSettings, error)  type NameResolveOption type NameResolveSettings  func NameResolveOptions(opts &amp;hellip;NameResolveOption) (*NameResolveSettings, error)  type ObjectAddLinkOption type ObjectAddLinkSettings  func ObjectAddLinkOptions(opts &amp;hellip;ObjectAddLinkOption) (*ObjectAddLinkSettings, error)  type ObjectNewOption type ObjectNewSettings  func ObjectNewOptions(opts &amp;hellip;ObjectNewOption) (*ObjectNewSettings, error)  type ObjectPutOption type ObjectPutSettings  func ObjectPutOptions(opts &amp;hellip;ObjectPutOption) (*ObjectPutSettings, error)  type PinAddOption type PinAddSettings  func PinAddOptions(opts &amp;hellip;PinAddOption) (*PinAddSettings, error)  type PinLsOption type PinLsSettings  func PinLsOptions(opts &amp;hellip;PinLsOption) (*PinLsSettings, error)  type PinUpdateOption type PinUpdateSettings  func PinUpdateOptions(opts &amp;hellip;PinUpdateOption) (*PinUpdateSettings, error)  type PubSubPeersOption type PubSubPeersSettings  func PubSubPeersOptions(opts &amp;hellip;PubSubPeersOption) (*PubSubPeersSettings, error)  type PubSubSubscribeOption type PubSubSubscribeSettings  func PubSubSubscribeOptions(opts &amp;hellip;PubSubSubscribeOption) (*PubSubSubscribeSettings, error)  type UnixfsAddOption type UnixfsAddSettings  func UnixfsAddOptions(opts &amp;hellip;UnixfsAddOption) (*UnixfsAddSettings, cid.</description>
+    </item>
+    
+    <item>
+      <title>常见问题</title>
+      <link>https://docs.ipfs.io/introduction/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/introduction/faq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>操作分块</title>
+      <link>https://docs.ipfs.io/guides/examples/blocks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/blocks/</guid>
+      <description>ipfs add 命令会用你指定的文件中的数据创建一个默克有向无环图（Merkle DAG）。 它在执行时遵循 unixfs 数据格式。 这意味着你的文件会被分割成块，然后使用链接节点（link nodes）把它们以类似于树的结构组合起来。 给定文件的散列其实是 DAG 的根节点（顶部节点）的散列。 你可以使用 ipfs ls 轻易地查看一个给定 DAG 的子块。
+例如：
+# 确保这个文件大于 256k ipfs add alargefile ipfs ls thathash  上面的命令应该打印出类似如下内容：
+ipfs@earth ~&amp;gt; ipfs ls qms2hjwx8qejwm4nmwu7ze6ndam2sfums3x6idwz5myzbn qmv8ndh7ageh9b24zngaextmuhj7aiuw3scc8hkczvjkww 7866189 qmuvjja4s4cgyqyppozttssquvgcv2n2v8mae3gnkrxmol 7866189 qmrgjmlhlddhvxuieveuuwkeci4ygx8z7ujunikzpfzjuk 7866189 qmrolalcquyo5vu5v8bvqmgjcpzow16wukq3s3vrll2tdk 7866189 qmwk51jygpchgwr3srdnmhyerheqd22qw3vvyamb3emhuw 5244129  这将显示文件的所有子块，以及它们及其子块在磁盘上的大小。
+如何操作分块？ 如果你喜欢探索，你可以从这些不同的块中得到很多不同的信息。 你可以使用子块的散列作为 ipfs cat 的输入，只查看给定子树（那个块和它的子块）的数据。 若要只查看给定块的数据而不查看其子块，使用 ipfs block get。 但是要小心，因为直接对某个块使用 ipfs block get 会在屏幕上打印出 DAG 结构的原始二进制数据。
+ipfs block stat 会告诉你一个给定块（不包括它的子块）的实际大小，ipfs refs 会告诉你一个块的所有子块。 类似地，ipfs ls 或 ipfs object links 会显示所有子块及它们的大小。 要编写在给定对象的每个子块上运行的脚本，ipfs refs 是一个更合适的命令。</description>
+    </item>
+    
+    <item>
+      <title>更加分布式的 Git</title>
+      <link>https://docs.ipfs.io/guides/examples/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/git/</guid>
+      <description>你有没有对自己说过：“伙计，我的 git 服务器不够分布式”或“我期望有一个简单的方法来提供全世界可用的静态 git 仓库”。 不用再期望了，我为你找到了解决方法！
+在本文中，我将讨论如何使用 ipfs 网络提供 git 仓库服务。 最终的结果将是一个 ipfs 支撑的可以使用 git clone 的地址！
+首先，选择你想要托管的那个 git 仓库，然后做一个它的裸克隆：
+$ git clone --bare git@myhost.io/myrepo  如果你不了解 git，一个裸仓库表示它没有工作目录、可以作为服务器。 它的格式与一般的 git 仓库略有不同。
+现在，为了让它准备好被克隆，你需要做以下操作：
+$ cd myrepo $ git update-server-info  可选地，你可以解压所有 git 对象：
+$ cp objects/pack/*.pack . $ git unpack-objects &amp;lt; ./*.pack $ rm ./*.pack  这样做会把 git 的大型打包文件分解为独立的对象。 如果你添加了这个存储库的多个版本，这会允许 ipfs 去除重复的对象。
+当你做完后，那个仓库已经准备好提供服务了。 剩下要做的就是把它添加到 ipfs：
+$ pwd /code/myrepo $ ipfs add -r .</description>
+    </item>
+    
+    <item>
+      <title>配置你的节点</title>
+      <link>https://docs.ipfs.io/guides/examples/config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/examples/config/</guid>
+      <description>ipfs 是通过一个 json 格式文本文件配置的，这个文件默认位于 ~/.ipfs/config。
+地址 配置文件里保存着数种不同类型的地址，他们都使用 multiaddr 地址格式。 下面我们看一下每个类型地址的含义。
+&amp;quot;Addresses&amp;quot;: { &amp;quot;Swarm&amp;quot;: [ &amp;quot;/ip4/0.0.0.0/tcp/4001&amp;quot; ], &amp;quot;API&amp;quot;: &amp;quot;/ip4/127.0.0.1/tcp/5001&amp;quot;, &amp;quot;Gateway&amp;quot;: &amp;quot;/ip4/127.0.0.1/tcp/8080&amp;quot; }  集群 集群地址是本地守护程序将用来监听来自其他 ipfs 节点的链接的地址。 你应该确保这些地址可以从别的计算机连接，并且你指定的端口没有被防火墙阻止。
+API API 地址是守护程序提供 http API 服务的地址。 这个 API 是用来通过命令行控制守护程序，如果你喜欢冒险，也可以直接通过 curl 进行控制。 你应该确保这个地址不能从你的机器以外访问，否则其他潜在的有恶意者可能能够向你的 ipfs 守护程序发送命令。
+网关 网关地址是守护程序提供网关接口服务的地址。 网关可用于通过 ipfs 查看文件，并提供静态网页。 这个端口能与不能从外部访问完全取决于你。 网关地址是可选的，如果保持空白，网关服务器将不会启动。
+挂载 如果没有用 ipfs mount 指定其他目录，那么挂载设置将指定 ipfs 和 ipns 虚拟文件系统的默认挂载点。 这些文件夹应该存在，并且你的用户应该有权限通过 fuse 挂载它们。
+引导 引导配置数组指定了你的守护程序将会在启动时连接的 ipfs 节点列表。 默认值是‘ipfs solarnet’节点，它们是一组分布在全国各地的服务器。
+By whyrusleeping</description>
+    </item>
+    
+  </channel>
+</rss>

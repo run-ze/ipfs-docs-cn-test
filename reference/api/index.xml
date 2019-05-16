@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Commands &amp; API on IPFS Documentation</title>
+    <link>https://docs.ipfs.io/reference/api/</link>
+    <description>Recent content in Commands &amp; API on IPFS Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://docs.ipfs.io/reference/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CLI Commands</title>
+      <link>https://docs.ipfs.io/reference/api/cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/reference/api/cli/</guid>
+      <description>Note: IPFS can run in either “online” (you have IPFS running separately as a daemon process) or “offline” mode, but some commands are only supported when online. For example ipfs swarm peers only works in online mode because you won’t be connected to a swarm at all if you’re offline. For more about running IPFS as a daemon, see “going online” in the usage documentation.
+Generated on 2018-04-09 13:54:54.079504</description>
+    </item>
+    
+    <item>
+      <title>HTTP API</title>
+      <link>https://docs.ipfs.io/reference/api/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/reference/api/http/</guid>
+      <description>Generated on 2019-04-26, from go-ipfs v0.4.20.
+When an IPFS node is running as a daemon, it exposes an HTTP API that allows you to control the node and run the same commands you can from the command line.
+In many cases, using this API this is preferable to embedding IPFS directly in your program — it allows you to maintain peer connections that are longer lived than your app and you can keep a single IPFS node running instead of several if your app can be launched multiple times.</description>
+    </item>
+    
+    <item>
+      <title>JS &amp; Go Libraries</title>
+      <link>https://docs.ipfs.io/reference/api/libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/reference/api/libraries/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

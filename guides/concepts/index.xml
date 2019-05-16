@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Concepts on IPFS Documentation</title>
+    <link>https://docs.ipfs.io/guides/concepts/</link>
+    <description>Recent content in Concepts on IPFS Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://docs.ipfs.io/guides/concepts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Content Identifiers (CIDs)</title>
+      <link>https://docs.ipfs.io/guides/concepts/cid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/cid/</guid>
+      <description>A content identifier, or CID, is a label used to point to material in IPFS. It doesn&amp;rsquo;t indicate where the content is stored, but it forms a kind of address based on the content itself. CIDs are short, regardless of the size of their underlying content.
+CIDs are based on the content’s cryptographic hash. That means:
+ Any difference in content will produce a different CID and The same piece of content added to two different IPFS nodes using the same settings will produce exactly the same CID.</description>
+    </item>
+    
+    <item>
+      <title>DNSLink</title>
+      <link>https://docs.ipfs.io/guides/concepts/dnslink/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/dnslink/</guid>
+      <description>DNSLink uses DNS TXT records to map a domain name (like ipfs.io) to an IPFS address. Because you can edit your DNS records, you can use them to always point to the latest version of an object in IPFS (remember that an IPFS object’s address changes if you modify the object). Because DNSLink uses DNS records, the names it produces are also usually easy to type and read.
+A DNSLink address looks like an IPNS address, but it uses a domain name in place of a hashed public key:</description>
+    </item>
+    
+    <item>
+      <title>Hashes</title>
+      <link>https://docs.ipfs.io/guides/concepts/hashes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/hashes/</guid>
+      <description>Hashes are functions that take some arbitrary input and return a fixed-length value. The particular value depends on the given hash algorithm in use, such as SHA-1 (used by Git), SHA-256, or BLAKE2, but a given hash algorithm always returns the same value for a given input. Have a look at the full list of hash functions for more.
+As an example, the input:
+Hello world  would be represented by SHA-1 as:</description>
+    </item>
+    
+    <item>
+      <title>IPNS</title>
+      <link>https://docs.ipfs.io/guides/concepts/ipns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/ipns/</guid>
+      <description>Inter-Planetary Name System (IPNS) is a system for creating and updating mutable links to IPFS content. Since objects in IPFS are content-addressed, their address changes every time their content does. That’s useful for a variety of things, but it makes it hard to get the latest version of something.
+A name in IPNS is the hash of a public key. It is associated with a record containing information about the hash it links to that is signed by the corresponding private key.</description>
+    </item>
+    
+    <item>
+      <title>Mutable File System (MFS)</title>
+      <link>https://docs.ipfs.io/guides/concepts/mfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/mfs/</guid>
+      <description>Because files in IPFS are content-addressed and immutable, they can be complicated to edit. Mutable File System (MFS) is a tool built into IPFS that lets you treat files like you would a normal name-based filesystem — you can add, remove, move, and edit MFS files and have all the work of updating links and hashes taken care of for you.
+MFS is accessed through the files commands in the IPFS CLI and API.</description>
+    </item>
+    
+    <item>
+      <title>Pinning</title>
+      <link>https://docs.ipfs.io/guides/concepts/pinning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/pinning/</guid>
+      <description>IPFS nodes treat the data they store like a cache, meaning that there is no guarantee that the data will continue to be stored. Pinning a CID tells an IPFS server that the data is important and mustn&amp;rsquo;t be thrown away.
+You should pin any content you consider important, to ensure that content is retained long-term. Since data important to someone else may not be important to you, pinning lets you have control over the disk space and data retention you need.</description>
+    </item>
+    
+    <item>
+      <title>UnixFS</title>
+      <link>https://docs.ipfs.io/guides/concepts/unixfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/guides/concepts/unixfs/</guid>
+      <description>A file in IPFS isn’t just content. It might be too big to fit in a single block, so it needs metadata to link all its blocks together. It might be a symlink or a directory, so it needs metadata to link to other files. UnixFS is the data format used to represent files and all their links and metadata in IPFS, and is loosely based on how files work in Unix.</description>
+    </item>
+    
+  </channel>
+</rss>

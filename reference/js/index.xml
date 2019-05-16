@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JS Implementation on IPFS Documentation</title>
+    <link>https://docs.ipfs.io/reference/js/</link>
+    <description>Recent content in JS Implementation on IPFS Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://docs.ipfs.io/reference/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Working with IPFS in JS</title>
+      <link>https://docs.ipfs.io/reference/js/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/reference/js/overview/</guid>
+      <description>There are two main JavaScript libraries for working with IPFS. Both work in Node.js and in modern web browsers:
+ js-ipfs is a full implementation of IPFS, similar to go-ipfs. You can use it either as a command-line application or as a library to start an IPFS node directly in your program.
+ js-ipfs-http-client is a smaller library that controls an IPFS node that is already running via its HTTP API.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Packages on IPFS Documentation</title>
+    <link>https://docs.ipfs.io/pkg/</link>
+    <description>Recent content in Packages on IPFS Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://docs.ipfs.io/pkg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>go-ipfs-api</title>
+      <link>https://docs.ipfs.io/go/pkg/go-ipfs-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/go/pkg/go-ipfs-api/</guid>
+      <description>Version: gx/v1.3.5
+Source: https://github.com/ipfs/go-ipfs-api/
+import &amp;quot;github.com/ipfs/go-ipfs-api&amp;quot;
+ Overview Index  Overview package shell implements a remote API interface for a running ipfs daemon
+Index  Constants type Error  func (e *Error) Error() string  type IdOutput type IpfsObject type LsLink type LsObject type ObjectLink type ObjectStats type PeerInfo type PeersList type PinInfo type PubSubRecord type PubSubSubscription  func (s *PubSubSubscription) Cancel() error func (s *PubSubSubscription) Next() (PubSubRecord, error)  type PublishResponse type Request  func NewRequest(ctx context.</description>
+    </item>
+    
+    <item>
+      <title>go-ipfs/core/coreapi</title>
+      <link>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/</guid>
+      <description>Version: 0.4.18
+Source: https://github.com/ipfs/go-ipfs/
+import &amp;quot;github.com/ipfs/go-ipfs/core/coreapi&amp;quot;
+ Overview Index  Overview Package coreapi provides direct access to the core commands in IPFS. If you are embedding IPFS directly in your Go program, this package is the public interface you should use to read and write files or otherwise control IPFS.
+If you are running IPFS as a separate process, you should use go-ipfs-api to work with it via HTTP. As we finalize the interfaces here, go-ipfs-api will transparently adopt them so you can use the same code with either package.</description>
+    </item>
+    
+    <item>
+      <title>go-ipfs/core/coreapi/interface</title>
+      <link>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/interface/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/interface/</guid>
+      <description>Version: 0.4.18
+Source: https://github.com/ipfs/go-ipfs/
+import &amp;quot;github.com/ipfs/go-ipfs/core/coreapi/interface&amp;quot;
+ Overview Index  Overview Package iface defines IPFS Core API which is a set of interfaces used to interact with IPFS nodes.
+Index  Variables type AddEvent type BadPinNode type BlockAPI type BlockStat type ChangeType type ConnectionInfo type CoreAPI type DagAPI type DagBatch type DagOps type DhtAPI type IpnsEntry type IpnsResult type Key type KeyAPI type NameAPI type ObjectAPI type ObjectChange type ObjectStat type Path  func ParsePath(p string) (Path, error)  type Pin type PinAPI type PinStatus type PubSubAPI type PubSubMessage type PubSubSubscription type ReadSeekCloser type Reader type ResolvedPath  func IpfsPath(c cid.</description>
+    </item>
+    
+    <item>
+      <title>go-ipfs/core/coreapi/interface/options</title>
+      <link>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/interface/options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/interface/options/</guid>
+      <description>Version: 0.4.18
+Source: https://github.com/ipfs/go-ipfs/
+import &amp;quot;github.com/ipfs/go-ipfs/core/coreapi/interface/options&amp;quot;
+ Overview Index  Overview Index  Constants Variables type BlockPutOption type BlockPutSettings  func BlockPutOptions(opts &amp;hellip;BlockPutOption) (*BlockPutSettings, cid.Prefix, error)  type BlockRmOption type BlockRmSettings  func BlockRmOptions(opts &amp;hellip;BlockRmOption) (*BlockRmSettings, error)  type DagPutOption type DagPutSettings  func DagPutOptions(opts &amp;hellip;DagPutOption) (*DagPutSettings, error)  type DagTreeOption type DagTreeSettings  func DagTreeOptions(opts &amp;hellip;DagTreeOption) (*DagTreeSettings, error)  type DhtFindProvidersOption type DhtFindProvidersSettings  func DhtFindProvidersOptions(opts &amp;hellip;DhtFindProvidersOption) (*DhtFindProvidersSettings, error)  type DhtProvideOption type DhtProvideSettings  func DhtProvideOptions(opts &amp;hellip;DhtProvideOption) (*DhtProvideSettings, error)  type KeyGenerateOption type KeyGenerateSettings  func KeyGenerateOptions(opts &amp;hellip;KeyGenerateOption) (*KeyGenerateSettings, error)  type KeyRenameOption type KeyRenameSettings  func KeyRenameOptions(opts &amp;hellip;KeyRenameOption) (*KeyRenameSettings, error)  type Layout type NamePublishOption type NamePublishSettings  func NamePublishOptions(opts &amp;hellip;NamePublishOption) (*NamePublishSettings, error)  type NameResolveOption type NameResolveSettings  func NameResolveOptions(opts &amp;hellip;NameResolveOption) (*NameResolveSettings, error)  type ObjectAddLinkOption type ObjectAddLinkSettings  func ObjectAddLinkOptions(opts &amp;hellip;ObjectAddLinkOption) (*ObjectAddLinkSettings, error)  type ObjectNewOption type ObjectNewSettings  func ObjectNewOptions(opts &amp;hellip;ObjectNewOption) (*ObjectNewSettings, error)  type ObjectPutOption type ObjectPutSettings  func ObjectPutOptions(opts &amp;hellip;ObjectPutOption) (*ObjectPutSettings, error)  type PinAddOption type PinAddSettings  func PinAddOptions(opts &amp;hellip;PinAddOption) (*PinAddSettings, error)  type PinLsOption type PinLsSettings  func PinLsOptions(opts &amp;hellip;PinLsOption) (*PinLsSettings, error)  type PinUpdateOption type PinUpdateSettings  func PinUpdateOptions(opts &amp;hellip;PinUpdateOption) (*PinUpdateSettings, error)  type PubSubPeersOption type PubSubPeersSettings  func PubSubPeersOptions(opts &amp;hellip;PubSubPeersOption) (*PubSubPeersSettings, error)  type PubSubSubscribeOption type PubSubSubscribeSettings  func PubSubSubscribeOptions(opts &amp;hellip;PubSubSubscribeOption) (*PubSubSubscribeSettings, error)  type UnixfsAddOption type UnixfsAddSettings  func UnixfsAddOptions(opts &amp;hellip;UnixfsAddOption) (*UnixfsAddSettings, cid.</description>
+    </item>
+    
+  </channel>
+</rss>

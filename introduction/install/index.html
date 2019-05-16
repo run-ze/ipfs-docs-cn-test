@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>安装 IPFS &ndash; IPFS Documentation</title>
+    
+    
+    <meta property="og:url" content="https://docs.ipfs.io/introduction/install/">
+    <meta property="og:title" content="IPFS Documentation">
+    
+    <meta name="apple-mobile-web-app-title" content="IPFS Documentation">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="canonical" href="https://docs.ipfs.io/introduction/install/">
+    <link rel="shortcut icon" type="image/x-icon" href="https://docs.ipfs.io/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://docs.ipfs.io/images/favicon.ico">
+    <link rel="stylesheet" href="../../assets/main.css">
+    
+<script>
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-96910779-6', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+  <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <div class="wrapper">
+      <header class="page-header">
+  <a href="../../" title="IPFS Documentation" class="page-logo">
+    <img src="../../assets/logo.svg">
+  </a>
+  <div class="page-title">
+    
+      <span class="page-title__site">
+        IPFS Documentation
+      </span>
+      <span class="page-title__topic">
+        - 安装 IPFS
+      </span>
+    
+  </div>
+
+  <button class="menu-button">
+    <span class="sr-only">Menu</span>
+    <i class="fas fa-bars"></i>
+  </button>
+</header>
+
+      
+<nav class="sidebar-nav primary" data-md-level="0" aria-labelledby="sidebar-nav-title">
+  <h1 id="sidebar-nav-title" class="sr-only">Menu</h1>
+  <button class="close-button">
+    <span class="sr-only">Close Menu (<kbd>esc</kbd>)</span>
+    <i class="fas fa-times"></i>
+  </button>
+
+  <ol class="sidebar-nav--list" data-md-scrollfix>
+    
+      <li class="sidebar-nav--item sidebar-nav--main-item">
+        
+        <span class="sidebar-nav--title">介绍</span>
+  
+  
+    
+    <ol class="sub-menu sidebar-nav--list" data-md-scrollfix>
+      <li class="sidebar-nav--item">
+  
+  
+  <a
+    href="../../introduction/overview/"
+    title="IPFS 是什么？"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>IPFS 是什么？</span>
+    
+    
+  </a>
+
+        
+      </li>
+      <li class="sidebar-nav--item active">
+  
+  
+  <a
+    href="../../introduction/install/"
+    title="安装 IPFS"
+    
+    class="sidebar-nav--link active"
+  >
+    
+    <span>安装 IPFS</span>
+    
+    
+  </a>
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+    <div class="table-of-contents" data-md-level="2">
+      <ul class="sidebar-nav--list">
+
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e5%ae%89%e8%a3%85%e9%a2%84%e7%bc%96%e8%af%91%e8%bd%af%e4%bb%b6%e5%8c%85">
+              安装预编译软件包
+            </a>
+
+            
+            
+
+            
+              
+                
+            <div class="" data-md-level="4">
+              <ul class="sidebar-nav--list">
+              
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#mac-os-x-%e5%92%8c-linux">
+              Mac OS X 和 Linux
+            </a>
+
+            
+            
+
+            
+          </li>
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#windows">
+              Windows
+            </a>
+
+            
+            
+
+            
+              
+                
+                </li>
+              </ul>
+            </div>
+          </li>
+              
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e4%bd%bf%e7%94%a8-ipfs-update-%e5%ae%89%e8%a3%85">
+              使用 ipfs-update 安装
+            </a>
+
+            
+            
+
+            
+              
+                
+            <div class="" data-md-level="4">
+              <ul class="sidebar-nav--list">
+              
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e8%8e%b7%e5%8f%96-ipfs-update">
+              获取 ipfs-update
+            </a>
+
+            
+            
+
+            
+          </li>
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e4%bd%bf%e7%94%a8-ipfs-update-%e5%ae%89%e8%a3%85-ipfs">
+              使用 ipfs-update 安装 ipfs
+            </a>
+
+            
+            
+
+            
+              
+                
+                </li>
+              </ul>
+            </div>
+          </li>
+              
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e4%bb%8e%e6%ba%90%e4%bb%a3%e7%a0%81%e6%9e%84%e5%bb%ba">
+              从源代码构建
+            </a>
+
+            
+            
+
+            
+          </li>
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e5%8d%87%e7%ba%a7-ipfs">
+              升级 IPFS
+            </a>
+
+            
+            
+
+            
+              
+                
+            <div class="" data-md-level="4">
+              <ul class="sidebar-nav--list">
+              
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e4%bd%bf%e7%94%a8-ipfs-update-%e5%8d%87%e7%ba%a7">
+              使用 ipfs-update 升级
+            </a>
+
+            
+            
+
+            
+          </li>
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e6%89%8b%e5%8a%a8%e5%8d%87%e7%ba%a7">
+              手动升级
+            </a>
+
+            
+            
+
+            
+              
+                
+                </li>
+              </ul>
+            </div>
+          </li>
+              
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e7%96%91%e9%9a%be%e8%a7%a3%e7%ad%94">
+              疑难解答
+            </a>
+
+            
+            
+
+            
+              
+                
+            <div class="" data-md-level="4">
+              <ul class="sidebar-nav--list">
+              
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e5%b8%ae%e5%b8%ae%e6%88%91">
+              帮帮我！
+            </a>
+
+            
+            
+
+            
+          </li>
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e6%a3%80%e6%9f%a5-go-%e8%af%ad%e8%a8%80%e7%89%88%e6%9c%ac">
+              检查 Go 语言版本
+            </a>
+
+            
+            
+
+            
+          </li>
+            
+        
+          
+          
+          
+            
+          
+          <li class="sidebar-nav--item">
+            <a class="sidebar-nav--link" href="#%e5%ae%89%e8%a3%85-fuse">
+              安装 FUSE
+            </a>
+
+            
+            
+
+            
+          </li>
+            
+        
+
+        
+          
+              </ul>
+            </div>
+          </li>
+          
+        
+      </ul>
+    </div>
+  
+      </li>
+      <li class="sidebar-nav--item">
+  
+  
+  <a
+    href="../../introduction/usage/"
+    title="基础使用"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>基础使用</span>
+    
+    
+  </a>
+
+        
+      </li>
+      <li class="sidebar-nav--item">
+  
+  
+  <a
+    href="https://discuss.ipfs.io/c/help/Old-FAQ"
+    title="常见问题"
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>常见问题</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+        
+      </li>
+    </ol>
+  
+        
+      </li>
+    
+      <li class="sidebar-nav--item sidebar-nav--main-item">
+        
+        <span class="sidebar-nav--title">指南</span>
+  
+  
+  
+
+  <ol class="section-menu sub-menu sidebar-nav--list">
+    
+      <li class="sidebar-nav--section ">
+        
+  
+  <a
+    href="../../guides/concepts/"
+    title="Concepts"
+    
+    class="sidebar-nav--link  sidebar-nav--title"
+  >
+    
+    <span>Concepts</span>
+    
+    
+  </a>
+        
+
+        
+          <ul class="sub-menu sidebar-nav--list">
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../guides/concepts/cid/"
+    title="Content Identifiers (CIDs)"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>Content Identifiers (CIDs)</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../guides/concepts/dnslink/"
+    title="DNSLink"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>DNSLink</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../guides/concepts/hashes/"
+    title="Hashes"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>Hashes</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../guides/concepts/ipns/"
+    title="IPNS"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>IPNS</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../guides/concepts/mfs/"
+    title="Mutable File System (MFS)"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>Mutable File System (MFS)</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../guides/concepts/pinning/"
+    title="Pinning"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>Pinning</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../guides/concepts/unixfs/"
+    title="UnixFS"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>UnixFS</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="sidebar-nav--section ">
+        
+          <span class="sidebar-nav--title">
+            
+            指南
+            
+          </span>
+        
+
+        
+          <ul class="sub-menu sidebar-nav--list">
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/go-ipfs/blob/master/docs/file-transfer.md"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>传输文件</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/archives/tree/master/tutorials/replicating-large-datasets"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>复制大量数据</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/in-web-browsers/blob/master/ADDRESSING.md"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>浏览器中的地址</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://proto.school/#/tutorials"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>交互式教程</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="sidebar-nav--section ">
+        
+          <span class="sidebar-nav--title">
+            
+            示例
+            
+          </span>
+        
+
+        
+          <ul class="sub-menu sidebar-nav--list">
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../guides/examples/"
+    title="基本示例"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>基本示例</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/js-ipfs/tree/master/examples"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>js-ipfs 示例</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ol>
+  
+        
+      </li>
+    
+      <li class="sidebar-nav--item sidebar-nav--main-item">
+        
+        <span class="sidebar-nav--title">参考</span>
+  
+  
+  
+
+  <ol class="section-menu sub-menu sidebar-nav--list">
+    
+      <li class="sidebar-nav--section ">
+        
+          <span class="sidebar-nav--title">
+            
+            命令与 API
+            
+          </span>
+        
+
+        
+          <ul class="sub-menu sidebar-nav--list">
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../reference/api/cli/"
+    title="CLI Commands"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>CLI Commands</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../reference/api/http/"
+    title="HTTP API"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>HTTP API</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/interface-ipfs-core/tree/master/SPEC"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>JS 和 Go 程序库</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="sidebar-nav--section ">
+        
+          <span class="sidebar-nav--title">
+            
+            Go 版实现
+            
+          </span>
+        
+
+        
+          <ul class="sub-menu sidebar-nav--list">
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../reference/go/overview/"
+    title="Working with Go IPFS"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>Working with Go IPFS</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../go/pkg/go-ipfs/core/coreapi"
+    title=""
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>go-ipfs 核心 API</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../go/pkg/go-ipfs/core/coreapi/interface"
+    title=""
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>go-ipfs Coreiface API</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../go/pkg/go-ipfs/core/coreapi/interface/options"
+    title=""
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>go-ipfs Core options API</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../go/pkg/go-ipfs-api"
+    title=""
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>go-ipfs-api 参考</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="sidebar-nav--section ">
+        
+          <span class="sidebar-nav--title">
+            
+            JS 版实现
+            
+          </span>
+        
+
+        
+          <ul class="sub-menu sidebar-nav--list">
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../reference/js/overview/"
+    title="Working with IPFS in JS"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>Working with IPFS in JS</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/js-ipfs"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>js-ipfs</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/js-ipfs-api"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>js-ipfs-api</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="sidebar-nav--section ">
+        
+          <span class="sidebar-nav--title">
+            
+            规范和计划
+            
+          </span>
+        
+
+        
+          <ul class="sub-menu sidebar-nav--list">
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/ipfs/blob/master/papers/ipfs-cap2pfs/ipfs-p2p-file-system.pdf"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>IPFS 白皮书</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/specs"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>IPFS 规范</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/ipfs/blob/master/REQUIREMENTS.md"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>直到 1.0.0 的路线图</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/ipfs/blob/master/IMPLEMENTATION_STATUS.md"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>各实现版本的状态</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/rfcs"
+    title="“变更请求”” (RFC) 是对协议、程序库接口和社区流程进行较大变更的提案"
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>RFC 列表</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ol>
+  
+        
+      </li>
+    
+      <li class="sidebar-nav--item sidebar-nav--main-item">
+        
+        <span class="sidebar-nav--title">社区</span>
+  
+  
+  
+
+  <ol class="section-menu sub-menu sidebar-nav--list">
+    
+      <li class="sidebar-nav--section ">
+        
+          <span class="sidebar-nav--title">
+            
+            应用
+            
+          </span>
+        
+
+        
+          <ul class="sub-menu sidebar-nav--list">
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="http://cluster.ipfs.io"
+    title="管理多个机器上的 IPFS 节点集群，以共享存储资源。"
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>IPFS 集群</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs-shipyard/ipfs-desktop"
+    title="运行 IPFS 节点的跨平台图形应用。"
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>IPFS 桌面客户端</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs-shipyard/ipfs-companion"
+    title="使网页中的 IPFS 资源安全可用的浏览器扩展。"
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>IPFS 伴侣</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/ipfs-pack"
+    title="把大量数据包装为适合 IPFS 的标准格式。"
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>IPFS Pack</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="sidebar-nav--section ">
+        
+          <span class="sidebar-nav--title">
+            
+            社区
+            
+          </span>
+        
+
+        
+          <ul class="sub-menu sidebar-nav--list">
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://discuss.ipfs.io/"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>讨论/支持论坛</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../community/irc/"
+    title=""
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>IRC</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/notes"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>研讨</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://calendar.google.com/calendar/embed?src=ipfs.io_eal36ugu5e75s207gfjcu0ae84@group.calendar.google.com"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>活动日历</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/community/"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>社区工具</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/pm/"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>项目管理</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://ipfs.io/blog/"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>博客</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>Youtube</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://twitter.com/IPFSbot"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>Twitter (@IPFSbot)</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://awesome.ipfs.io/"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>Awesome IPFS</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://archives.ipfs.io"
+    title="保存有价值的公共数据的存档的社区项目。"
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>IPFS 公共存档</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://discuss.ipfs.io/c/help/Old-FAQ"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>常见问题</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="sidebar-nav--section ">
+        
+          <span class="sidebar-nav--title">
+            
+            参与进来
+            
+          </span>
+        
+
+        
+          <ul class="sub-menu sidebar-nav--list">
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="../../community/contribute/how_to_help/"
+    title="How to Help"
+    
+    class="sidebar-nav--link "
+  >
+    
+    <span>How to Help</span>
+    
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/ipfs"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>GitHub (IPFS)</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/docs"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>GitHub (docs)</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/community/blob/master/CONTRIBUTING.md"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>贡献指南</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/community/blob/master/code-of-conduct.md"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>行为守则</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/community/blob/master/CONTRIBUTING_GO.md"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>Go 风格指南</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://github.com/ipfs/community/blob/master/CONTRIBUTING_JS.md"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>JS 风格指南</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li class="sidebar-nav--section ">
+        
+          <span class="sidebar-nav--title">
+            
+            相关项目
+            
+          </span>
+        
+
+        
+          <ul class="sub-menu sidebar-nav--list">
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="http://libp2p.io"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>Libp2p</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://multiformats.io"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>Multiformats</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://ipld.io"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>IPLD</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+              <li class="sidebar-nav--item">
+  
+  <a
+    href="https://proto.school/"
+    title=""
+    target="_blank"
+    class="sidebar-nav--link  external-link"
+  >
+    
+    <span>ProtoSchool</span>
+    <i class="fas fa-external-link-square-alt fa-sm"></i>
+    
+  </a>
+
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ol>
+  
+        
+      </li>
+    
+  </ol>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <main class="article">
+        
+<h1>安装 IPFS </h1>
+
+
+<!--
+基于现存的安装文档 https://github.com/ipfs/website/blob/714fa4f3fc469d81b94dc190f1335b9556ad90e1/content/docs/install.md
+
+Note there are pending PRs for that document that will need to be included here:
+- https://github.com/ipfs/website/pull/260 / https://github.com/ipfs/website/pull/228
+- https://github.com/ipfs/website/pull/258
+
+-->
+
+<p>有许多把 IPFS 安装到你的系统的方法。我们一般推荐 <a href="#安装预编译软件包">安装预编译软件包</a>，但还有一些其他支持的选择：</p>
+
+<ul>
+<li><a href="#安装预编译软件包">安装预编译软件包</a>（推荐）</li>
+<li><a href="#使用-ipfs-update-安装">使用 ipfs-update 安装</a></li>
+<li><a href="#从源代码构建">从源代码构建</a></li>
+<li><a href="#升级-ipfs">升级 IPFS</a></li>
+<li><a href="#疑难解答">疑难解答</a></li>
+</ul>
+
+<p>请注意这些说明使用<strong>命令行</strong>。我们用 <code>$</code> 表示命令提示符—以它开头的行表示需要输入的命令，不以它开头则表示命令的输出。</p>
+
+<hr />
+
+<h2 id="安装预编译软件包">安装预编译软件包</h2>
+
+<p>首先，下载你的平台对应版本的 IPFS：</p>
+
+<p><a class="button button-primary" href="https://dist.ipfs.io/#go-ipfs" role="button">
+  下载你平台的 IPFS&nbsp;&nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+</a></p>
+
+<h3 id="mac-os-x-和-linux">Mac OS X 和 Linux</h3>
+
+<!-- macOS 和 Linux 平台的 install.sh 好像都只会移动到 /usr/local/bin 或 /usr/bin，并不会检查 $PATH -->
+
+<p>下载完成之后，解压档案，然后用 <code>install.sh</code> 把 <code>ipfs</code> 可执行文件移动到 <code>$PATH</code> 环境变量里的路径下：</p>
+
+<pre><code class="language-sh">$ tar xvfz go-ipfs.tar.gz
+$ cd go-ipfs
+$ ./install.sh
+</code></pre>
+
+<p>测试一下：</p>
+
+<pre><code class="language-sh">$ ipfs help
+USAGE:
+
+    ipfs - Global p2p merkle-dag filesystem.
+...
+</code></pre>
+
+<p>恭喜！你的电脑已经安装好 IPFS 了。</p>
+
+<p><a class="button button-primary" href="../../introduction/usage/" role="button">
+  日常使用&nbsp;&nbsp;<i class="fa fa-arrow-right"></i>
+</a></p>
+
+<h3 id="windows">Windows</h3>
+
+<p>下载完之后，解压档案，然后把 <code>ipfs.exe</code> 移动到 <code>%PATH%</code> 环境变量里的路径下。</p>
+
+<p>测试一下：</p>
+
+<pre><code class="language-sh">$ ipfs help
+USAGE:
+
+    ipfs - Global p2p merkle-dag filesystem.
+...
+</code></pre>
+
+<p>恭喜！你的电脑已经安装好 IPFS 了。</p>
+
+<p><a class="button button-primary" href="../../introduction/usage/" role="button">
+  日常使用&nbsp;&nbsp;<i class="fa fa-arrow-right"></i>
+</a></p>
+
+<hr />
+
+<h2 id="使用-ipfs-update-安装">使用 ipfs-update 安装</h2>
+
+<p><code>ipfs-update</code> 是一个用于安装和升级 <code>ipfs</code> 二进制文件的命令行工具。</p>
+
+<h3 id="获取-ipfs-update">获取 ipfs-update</h3>
+
+<p>可以从 <a href="https://dist.ipfs.io/#ipfs-update" target="_blank">https://dist.ipfs.io/#ipfs-update</a> 下载你平台的 <code>ipfs-update</code>。</p>
+
+<p>如果你有可用的 Go 语言环境（&gt;=1.8），你也可以这样安装它：</p>
+
+<pre><code>$ go get -u github.com/ipfs/ipfs-update
+</code></pre>
+
+<p>在安装新版本 <code>ipfs</code> 或升级前确保你在使用最新版本的 <code>ipfs-update</code>。</p>
+
+<h3 id="使用-ipfs-update-安装-ipfs">使用 ipfs-update 安装 ipfs</h3>
+
+<p><code>ipfs-update versions</code> 会显示所有可以下载的 <code>ipfs</code> 版本：</p>
+
+<pre><code>$ ipfs-update versions
+v0.3.2
+v0.3.4
+v0.3.5
+v0.3.6
+v0.3.7
+v0.3.8
+v0.3.9
+v0.3.10
+v0.3.11
+v0.4.0
+v0.4.1
+v0.4.2
+v0.4.3
+v0.4.4
+v0.4.5
+v0.4.6
+v0.4.7-rc1
+</code></pre>
+
+<p><code>ipfs-update install latest</code> 会安装可用的最新版本：</p>
+
+<pre><code>$ ipfs-update install latest
+fetching go-ipfs version v0.4.7-rc1
+binary downloaded, verifying...
+success!
+stashing old binary
+installing new binary to /home/hector/go/bin/ipfs
+checking if repo migration is needed...
+Installation complete!
+</code></pre>
+
+<p>请留意可用的最新版本可能不是稳定版（比如：发布候选版会显示为 <code>vX.X.X-rcX</code>）。
+所以建议指明你想要安装的版本，例如 <code>ipfs-update install v0.4.6</code>。</p>
+
+<hr />
+
+<h2 id="从源代码构建">从源代码构建</h2>
+
+<div class="message mb">
+  <strong>警告：</strong> 过去你可以使用 <code>go get</code> 安装 IPFS。现在不能再这样了！
+</div>
+
+<p>如果你想，可以从源代码构建 IPFS。
+如果你使用 Mac OS X 或 Linux，安装介绍在 <a href="https://github.com/ipfs/go-ipfs#build-from-source" target="_blank">这个说明</a>。
+如果你使用 Windows，看一下 <a href="https://github.com/ipfs/go-ipfs/blob/master/docs/windows.md" target="_blank">这个文档</a>。</p>
+
+<hr />
+
+<h2 id="升级-ipfs">升级 IPFS</h2>
+
+<p><code>ipfs</code> 的升级（还有降级）可能需要使用 <a href="https://dist.ipfs.io/#fs-repo-migrations" target="_blank">fs-repo-migrations</a> 工具进行仓库的升级。</p>
+
+<h3 id="使用-ipfs-update-升级">使用 ipfs-update 升级</h3>
+
+<p>在安装新版或旧版 <code>ipfs</code> 过程中（如上所述），<code>ipfs-update install</code> 会在需要时下载并运行 <code>fs-repo-migrations</code>。
+这是最简单的升级方法。</p>
+
+<div class="message mb">
+  <strong>警告：</strong> 确保升级时 ipfs 守护程序没在运行。
+</div>
+
+<h3 id="手动升级">手动升级</h3>
+
+<p>要手动升级 <code>ipfs</code>，你需要手动执行仓库迁移。步骤如下：</p>
+
+<ul>
+<li>停止 <code>ipfs</code> 守护程序，如果它正在运行</li>
+<li>可以备份你的 <code>ipfs</code> 数据目录（例如：<code>cp -aL ~/.ipfs ~/.ipfs.bk</code>）</li>
+<li>从 <a href="https://dist.ipfs.io/#go-ipfs" target="_blank">https://dist.ipfs.io/#go-ipfs</a> 下载并安装最新版 <code>ipfs</code></li>
+<li>运行 <code>ipfs daemon</code>。</li>
+</ul>
+
+<p>如果需要迁移仓库，<code>ipfs</code> 会提示用户，下载并安装 <code>fs-repo-migrations</code> 并进行升级。
+如果你想要自动执行这个流程，在启动守护程序时附加 <code>--migrate</code> 参数。</p>
+
+<p>也可以从 <a href="https://dist.ipfs.io/#fs-repo-migrations" target="_blank">https://dist.ipfs.io/#fs-repo-migrations</a>
+下载最新版 <code>fs-repo-migrations</code> 并
+<a href="https://github.com/ipfs/fs-repo-migrations/blob/master/run.md" target="_blank">遵照这些说明</a> 来手动执行迁移。</p>
+
+<hr />
+
+<h2 id="疑难解答">疑难解答</h2>
+
+<h3 id="帮帮我">帮帮我！</h3>
+
+<p>如果你遇到任何问题，可以通过 <a href="../../#community">#ipfs</a>
+或 <a href="../../#community">邮件列表</a> 得到帮助。</p>
+
+<h3 id="检查-go-语言版本">检查 Go 语言版本</h3>
+
+<p>IPFS 可以在 Go 1.7.0 或以上版本运行。
+要检查你安装的 Go 版本，执行 <code>go version</code>。
+我得到的是：</p>
+
+<pre><code class="language-sh">$ go version
+go version go1.7 linux/amd64
+</code></pre>
+
+<p>如果你需要升级，建议安装 <a href="https://golang.org/doc/install" target="_blank">官方 Go 安装包</a>。
+软件包管理器附带的 Go 版本往往是过时的。</p>
+
+<h3 id="安装-fuse">安装 FUSE</h3>
+
+<p>要了解更多安装 FUSE （这样你就可以把 IPFS 作为文件系统挂载了）的说明，看看 <a href="https://github.com/ipfs/go-ipfs/blob/master/docs/fuse.md" target="_blank">github.com/ipfs/go-ipfs/blob/master/docs/fuse.md</a>。</p>
+
+
+        <footer class="page-footer">
+  <div class="page-footer--copyright">
+    <p class="md-footer-copyright__highlight">
+      © <a href="//protocol.ai">Protocol Labs</a> | Except as noted, content licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0
+    </p>
+    <p>
+      Powered by
+      <a href="//ipfs.io">IPFS</a>,
+      <a href="https://gohugo.io">Hugo</a>,
+      <a href="https://github.com/davecheney/godoc2md">godoc2md</a>,
+      and <a href="https://documentation.js.org">documentation.js</a>.
+      
+    </p>
+    <p>
+      <a href="https://github.com/ipfs/docs/blob/master/content/introduction/install.md" class="edit-page-link">Edit this page in GitHub</a>
+    </p>
+  </div>
+
+  <div class="page-footer--social">
+    <a href="https://github.com/ipfs/ipfs" title="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/ipfsbot" title="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+    <a href="https://youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew" title="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+  </div>
+</footer>
+
+      </main>
+    </div>
+    <script src="../../assets/main.js"></script>
+    <script src="../../fontawesome/fontawesome.min.js"></script>
+    <script src="../../fontawesome/fontawesome-all.min.js"></script>
+  </body>
+</html>

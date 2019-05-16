@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Get Involved on IPFS Documentation</title>
+    <link>https://docs.ipfs.io/community/contribute/</link>
+    <description>Recent content in Get Involved on IPFS Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://docs.ipfs.io/community/contribute/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Help</title>
+      <link>https://docs.ipfs.io/community/contribute/how_to_help/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/community/contribute/how_to_help/</guid>
+      <description>So you want to contribute to IPFS and the ecosystem? Here is a quick listing of things we need help with and how you can get started. Even if what you want to do is not listed here, we probably accept contributions for it! If you&amp;rsquo;re unsure, please open a issue.
+Areas of contribution  Code Documentation Support Testing Design Issues / Triaging Community Applications Protocol Design Research  Code IPFS and its sister-projects are big, with lots of code written in multiple languages.</description>
+    </item>
+    
+  </channel>
+</rss>

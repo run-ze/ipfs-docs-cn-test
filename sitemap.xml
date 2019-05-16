@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://docs.ipfs.io/introduction/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/introduction/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/introduction/usage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/reference/api/cli/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/reference/api/http/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/reference/api/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/community/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/concepts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/concepts/cid/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/concepts/dnslink/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/community/contribute/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/concepts/hashes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/community/contribute/how_to_help/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/websites/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/concepts/ipns/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/community/irc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/reference/api/libraries/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/reference/js/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/api/service/readme/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/bootstrap/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/concepts/mfs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/pkg/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/concepts/pinning/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/pinning/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/videos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/network/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/reference/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/snapshots/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/ipns/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/concepts/unixfs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/graphmd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/reference/go/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/reference/js/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/go/pkg/go-ipfs-api/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/interface/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/go/pkg/go-ipfs/core/coreapi/interface/options/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/introduction/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/introduction/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/blocks/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/git/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.ipfs.io/guides/examples/config/</loc>
+  </url>
+  
+</urlset>

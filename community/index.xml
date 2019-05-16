@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Community on IPFS Documentation</title>
+    <link>https://docs.ipfs.io/community/</link>
+    <description>Recent content in Community on IPFS Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://docs.ipfs.io/community/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IRC</title>
+      <link>https://docs.ipfs.io/community/irc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.ipfs.io/community/irc/</guid>
+      <description>There are several IRC channels on Freenode dedicated to IPFS, and it’s a great place for live chat:
+ Use #ipfs on irc.freenode.org for general IPFS usage and community chat. Use #ipfs-dev on irc.freenode.org for discussing implementation details, especially if you are contributing code to IPFS.  For longer-lived discussions and for support, please use the discussion forums at https://discuss.ipfs.io instead of IRC! It’s easy for complex discussions to get lost in a sea of new messages on IRC.</description>
+    </item>
+    
+  </channel>
+</rss>
