@@ -35,6 +35,7 @@ packages:
 	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs-api master $(PKGDIR) pkg
 	# $(PREPEND)scripts/pkg2md.sh github.com/ipfs/js-ipfs master $(PKGDIR) pkg
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs-api gx/v1.3.5 $(PKGDIR) go/pkg
+	# 可以尝试去掉这个会有什么影响
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi v0.4.18 $(PKGDIR) go/pkg
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface v0.4.18 $(PKGDIR) go/pkg
 	$(PREPEND)scripts/pkg2md.sh github.com/ipfs/go-ipfs/core/coreapi/interface/options v0.4.18 $(PKGDIR) go/pkg

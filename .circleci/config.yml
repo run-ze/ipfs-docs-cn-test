@@ -16,35 +16,44 @@ jobs:
           paths:
             - public
 
-#   deploy:
-#     docker:
-#       - image: olizilla/ipfs-dns-deploy:latest
-#         environment:
-#           DOMAIN: zh-cn.help
-#           BUILD_DIR: public
-#     steps:
-#       - attach_workspace:
-#           at: /tmp/workspace
-#       - run:
-#           name: Deploy website to IPFS
-#           command: |
-#             pin_name="$DOMAIN build $CIRCLE_BUILD_NUMBER"
+  deploy:
+    docker:
+      - image: olizilla/ipfs-dns-deploy:latest
+        environment:
+          DOMAIN: zh-cn.help
+          BUILD_DIR: public
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - add_ssh_keys:
+          fingerprints:
+            - b0:6b:cf:e8:72:36:d0:35:d5:bf:eb:9f:4c:f4:a6:2b
+      - checkout:
+          path: /tmp/workspace/repo
+      - run:
+          name: Deploy website to IPFS
+          command: |
+            if [ "$CIRCLE_BRANCH" == "gh-pages" ] ; then
+              exit
+            fi
 
-#             hash=$(pin-to-cluster.sh "$pin_name" /tmp/workspace/$BUILD_DIR)
+            cd /tmp/workspace/repo
 
-#             echo "Website added to IPFS: https://ipfs.io/ipfs/$hash"
+            git checkout gh-pages
 
-#             # Update DNSlink for prod or dev domain
-#             if [ "$CIRCLE_BRANCH" == "master" ] ; then
-#               dnslink-dnsimple -d $DOMAIN -r _dnslink -l /ipfs/$hash
-#             fi
+            mv -f /tmp/workspace/$BUILD_DIR/* /tmp/workspace/repo
 
-# workflows:
-#   version: 2
-#   build-deploy:
-#     jobs:
-#       - build
-#       - deploy:
-#           context: ipfs-dns-deploy
-#           requires:
-#             - build
+            git add .
+
+            git commit -m "Circle CI build $CIRCLE_BUILD_NUMBER"
+
+            git push origin gh-pages
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
