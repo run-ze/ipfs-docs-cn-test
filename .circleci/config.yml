@@ -46,11 +46,11 @@ jobs:
 
             mv -f /tmp/workspace/$BUILD_DIR/* /tmp/workspace/repo
 
-            echo $note > circle-count
+            echo "$note" > circle-count
 
             git add .
 
-            git commit -m $note
+            git commit -m "$note"
 
             git push origin gh-pages
 
