@@ -33,27 +33,25 @@ jobs:
       - run:
           name: Deploy website to IPFS
           command: |
-            echo "cd /tmp/workspace/repo"
+            note="Circle CI build $CIRCLE_BUILD_NUM"
+
             cd /tmp/workspace/repo
 
             git config user.email "me@lirunze.xyz"
             git config user.name "Circle CI"
 
-            echo "checkout gh-pages"
             git checkout gh-pages
 
-            echo "mv -f /tmp/workspace/$BUILD_DIR/* /tmp/workspace/repo"
             rm -rf /tmp/workspace/repo/*
 
             mv -f /tmp/workspace/$BUILD_DIR/* /tmp/workspace/repo
 
-            echo "git add ."
+            echo $note > circle-count
+
             git add .
 
-            echo "git commit -m "Circle CI build $CIRCLE_BUILD_NUM""
-            git commit -m "Circle CI build $CIRCLE_BUILD_NUM"
+            git commit -m $note
 
-            echo "git push origin gh-pages"
             git push origin gh-pages
 
 workflows:
